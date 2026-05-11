@@ -49,7 +49,7 @@ export default function FAQSection() {
             >
               <button
                 className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
-                onClick={() => setOpen(open === i ? -1 : i)}
+                onClick={() => setOpen(i)}
               >
                 <span className={`font-bold text-base sm:text-lg ${open === i ? 'text-white' : 'text-gray-950'}`}>
                   {faq.q}
