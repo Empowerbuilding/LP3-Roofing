@@ -46,17 +46,17 @@ export default function Home() {
       {/* Hero */}
       <section className="relative flex items-center min-h-[auto] lg:min-h-screen bg-gray-800">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Headline + subtext + phone */}
             <div className="text-center lg:text-left">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
                 Fort Worth&apos;s{" "}
                 <span className="text-orange-500">#1 Rated</span>
                 <br />
                 Roofing Contractor
               </h1>
-              <p className="mt-3 lg:mt-6 text-sm sm:text-xl text-gray-200 leading-relaxed max-w-lg">
+              <p className="mt-2 lg:mt-6 text-xs sm:text-xl text-gray-200 leading-snug max-w-lg">
                 Licensed &amp; insured. Storm damage specialists. 20+ years serving the DFW area.
                 We handle your insurance claim from start to finish — at no extra cost to you.
               </p>
