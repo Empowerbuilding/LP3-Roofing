@@ -2,68 +2,15 @@ import Link from "next/link";
 import TrustBadges from "@/components/TrustBadges";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
+import HeroForm from "@/components/HeroForm";
 
-const services = [
-  {
-    title: "Storm Damage",
-    desc: "Fast, expert insurance claim assistance after hail, wind, or tornado damage.",
-    href: "/services/storm-damage",
-    icon: (
-      <svg className="w-10 h-10 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
-      </svg>
-    ),
-  },
-  {
-    title: "Roof Replacement",
-    desc: "Full roof replacement using premium materials backed by manufacturer warranties.",
-    href: "/services/roof-replacement",
-    icon: (
-      <svg className="w-10 h-10 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
-  },
-  {
-    title: "Roof Repair",
-    desc: "Targeted repairs for leaks, missing shingles, flashing, and more.",
-    href: "/services/roof-repair",
-    icon: (
-      <svg className="w-10 h-10 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Commercial Roofing",
-    desc: "Low-slope, flat, and TPO roofing systems for businesses and commercial properties.",
-    href: "/services/commercial",
-    icon: (
-      <svg className="w-10 h-10 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-  },
-  {
-    title: "Gutters",
-    desc: "Seamless gutter installation and replacement to protect your foundation.",
-    href: "/services/gutters",
-    icon: (
-      <svg className="w-10 h-10 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-      </svg>
-    ),
-  },
-  {
-    title: "Free Inspection",
-    desc: "Schedule your free, no-obligation roof inspection with our certified experts.",
-    href: "/contact",
-    icon: (
-      <svg className="w-10 h-10 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
-  },
+const serviceLinks = [
+  { title: "Storm Damage", href: "/services/storm-damage" },
+  { title: "Roof Replacement", href: "/services/roof-replacement" },
+  { title: "Roof Repair", href: "/services/roof-repair" },
+  { title: "Commercial Roofing", href: "/services/commercial" },
+  { title: "Gutters", href: "/services/gutters" },
+  { title: "Free Inspection", href: "/contact" },
 ];
 
 const testimonials = [
@@ -103,30 +50,42 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex items-center justify-center min-h-screen bg-gray-950">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
-            Fort Worth&apos;s Most Trusted<br />
-            <span className="text-orange-500">Roofing Contractor</span>
-          </h1>
-          <p className="mt-6 text-xl text-gray-200 max-w-2xl mx-auto">
-            Licensed &amp; insured. Storm damage specialists. 20+ years serving the DFW area.
-            We handle your insurance claim from start to finish — at no extra cost to you.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg rounded-md transition-colors duration-200"
-            >
-              Get Free Inspection
-            </Link>
-            <Link
-              href="/gallery"
-              className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-gray-950 font-bold text-lg rounded-md transition-colors duration-200"
-            >
-              View Our Work
-            </Link>
+      <section className="relative flex items-center min-h-screen bg-gray-800">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Headline + subtext + phone */}
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+                Fort Worth&apos;s{" "}
+                <span className="text-orange-500">#1 Rated</span>
+                <br />
+                Roofing Contractor
+              </h1>
+              <p className="mt-6 text-lg sm:text-xl text-gray-200 leading-relaxed max-w-lg">
+                Licensed &amp; insured. Storm damage specialists. 20+ years serving the DFW area.
+                We handle your insurance claim from start to finish — at no extra cost to you.
+              </p>
+              <a
+                href="tel:8175550100"
+                className="mt-8 inline-flex items-center gap-3 text-white hover:text-orange-400 transition-colors duration-200"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-orange-500">
+                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-sm text-gray-300">Call us anytime</div>
+                  <div className="text-2xl font-bold tracking-wide">817-555-0100</div>
+                </div>
+              </a>
+            </div>
+
+            {/* Right: Estimate form card */}
+            <div>
+              <HeroForm />
+            </div>
           </div>
         </div>
       </section>
@@ -134,28 +93,17 @@ export default function Home() {
       {/* Trust Badges */}
       <TrustBadges />
 
-      {/* Services */}
-      <section className="bg-white py-24">
+      {/* Services Row */}
+      <section className="bg-gray-950 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-950">Our Services</h2>
-            <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
-              From emergency repairs to full replacements, we do it all with expert craftsmanship and honest pricing.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((s) => (
+          <div className="flex flex-wrap justify-center gap-3">
+            {serviceLinks.map((s) => (
               <Link
                 key={s.title}
                 href={s.href}
-                className="group block p-8 border border-gray-100 rounded-xl hover:border-orange-200 hover:shadow-lg transition-all duration-200"
+                className="px-6 py-3 border border-gray-600 text-gray-200 rounded-full text-sm font-semibold hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-200 whitespace-nowrap"
               >
-                <div className="mb-4">{s.icon}</div>
-                <h3 className="text-xl font-bold text-gray-950 group-hover:text-orange-500 transition-colors duration-200">{s.title}</h3>
-                <p className="mt-2 text-gray-500 text-sm leading-relaxed">{s.desc}</p>
-                <span className="mt-4 inline-block text-orange-500 text-sm font-semibold">
-                  Learn more &rarr;
-                </span>
+                {s.title}
               </Link>
             ))}
           </div>
