@@ -30,7 +30,7 @@ export default function ServiceAreaSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setTruckVisible(true) },
-      { threshold: 0.2 }
+      { threshold: 0.05 }
     )
     if (truckRef.current) observer.observe(truckRef.current)
     return () => observer.disconnect()
@@ -93,7 +93,7 @@ export default function ServiceAreaSection() {
   }, [])
 
   return (
-    <section className="bg-gray-950 py-20 overflow-hidden">
+    <section className="bg-gray-950 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">Service Area</p>
@@ -119,8 +119,8 @@ export default function ServiceAreaSection() {
             ref={truckRef}
             className="w-full lg:w-1/2 transition-all duration-1000 ease-out"
             style={{
-              transform: truckVisible ? 'translateX(0)' : 'translateX(120%)',
-              opacity: truckVisible ? 1 : 0,
+              transform: truckVisible ? 'translateX(0)' : 'translateX(8rem)',
+              opacity: truckVisible ? 1 : 0.01,
             }}
           >
             <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
