@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Image
-              src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/logo.jpg"
+              src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/logo-v2.jpg"
               alt="LP3 Roofing & Construction"
               width={500}
               height={192}
