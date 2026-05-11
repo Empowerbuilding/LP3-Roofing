@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PartnerLogos from "@/components/PartnerLogos";
 import ServicesSection from "@/components/ServicesSection";
+import WarrantySection from "@/components/WarrantySection";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 import HeroForm from "@/components/HeroForm";
@@ -89,6 +90,9 @@ export default function Home() {
 
       {/* Services */}
       <ServicesSection />
+
+      {/* Warranty / About Section */}
+      <WarrantySection />
 
       {/* Why LP3 */}
       <section className="bg-gray-50 py-24">
