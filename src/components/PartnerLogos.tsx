@@ -16,7 +16,8 @@ export default function PartnerLogos() {
     <section className="bg-gray-50 py-12 border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">Our Trusted Partners</p>
-        <div className="grid grid-cols-8 items-center gap-6">
+        {/* Desktop: single row | Mobile: staggered 4-4 */}
+        <div className="hidden md:grid md:grid-cols-8 items-center gap-6">
           {logos.map((logo) => (
             <div key={logo.name} className="flex items-center justify-center">
               <Image
@@ -28,6 +29,26 @@ export default function PartnerLogos() {
               />
             </div>
           ))}
+        </div>
+
+        {/* Mobile staggered layout */}
+        <div className="md:hidden flex flex-col gap-4">
+          <div className="flex justify-center items-center gap-6">
+            {logos.slice(0, 4).map((logo) => (
+              <div key={logo.name} className="flex items-center justify-center">
+                <Image src={logo.src} alt={logo.name} width={logo.width} height={logo.height}
+                  className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center items-center gap-6 ml-8">
+            {logos.slice(4).map((logo) => (
+              <div key={logo.name} className="flex items-center justify-center">
+                <Image src={logo.src} alt={logo.name} width={logo.width} height={logo.height}
+                  className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
