@@ -16,7 +16,7 @@ export default function PartnerLogos() {
     <section className="bg-gray-50 py-12 border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">Our Trusted Partners</p>
-        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14">
+        <div className="grid grid-cols-8 items-center gap-6">
           {logos.map((logo) => (
             <div key={logo.name} className="flex items-center justify-center">
               <Image
@@ -24,7 +24,7 @@ export default function PartnerLogos() {
                 alt={logo.name}
                 width={logo.width}
                 height={logo.height}
-                className="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
               />
             </div>
           ))}
