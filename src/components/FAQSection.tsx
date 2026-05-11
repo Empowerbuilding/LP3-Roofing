@@ -1,0 +1,78 @@
+'use client'
+
+import { useState } from 'react'
+import { useReveal } from '@/hooks/useReveal'
+import React from 'react'
+
+const faqs = [
+  {
+    q: 'What Type Of Roofing Warranties Come With My Roof?',
+    a: 'LP3 Roofing installs Atlas and GAF certified roofing systems backed by industry-leading warranties. Depending on your selected system, you can receive up to a lifetime material warranty and a 10-year workmanship warranty. We handle all warranty registration on your behalf so you\'re fully protected from day one.',
+  },
+  {
+    q: 'Do You Help With Insurance Claims?',
+    a: 'Absolutely — it\'s one of our specialties. Aaron and our team have extensive experience navigating the insurance claim process. We\'ll document the damage, work directly with your adjuster, handle all the paperwork, and make the process as stress-free as possible for you.',
+  },
+  {
+    q: 'How Much Does A Roof Replacement Cost?',
+    a: 'Every roof is different. Cost depends on the size of your home, the materials selected, and the complexity of your roof. We offer free inspections and transparent, no-surprise estimates. Many of our customers pay little to nothing out of pocket when their replacement is covered through their homeowner\'s insurance.',
+  },
+  {
+    q: 'Are You Licensed & Insured?',
+    a: 'Yes — LP3 Roofing & Construction is fully licensed and insured in Texas. We are also BBB accredited. You\'ll never have to worry about liability on your property. We take professionalism seriously from the first call to the final cleanup.',
+  },
+  {
+    q: 'How Long Does A Roof Replacement Take?',
+    a: 'Most residential roof replacements are completed in a single day. Our crews are efficient, experienced, and come prepared with everything needed to get the job done right without dragging it out. We\'ll also clean up completely before we leave.',
+  },
+]
+
+export default function FAQSection() {
+  const [open, setOpen] = useState<number>(0)
+  const ref = useReveal()
+
+  return (
+    <section ref={ref as React.RefObject<HTMLElement>} className="bg-white py-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <p className="reveal text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">FAQ</p>
+          <h2 className="reveal delay-100 text-3xl sm:text-4xl font-extrabold text-gray-950">Got Questions? We&apos;ve Got Answers.</h2>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          {faqs.map((faq, i) => (
+            <div
+              key={i}
+              className={`reveal delay-${(i + 1) * 100} rounded-2xl border-2 overflow-hidden transition-all duration-300 ${
+                open === i ? 'bg-gray-950 border-gray-950' : 'bg-white border-gray-200 hover:border-gray-400'
+              }`}
+            >
+              <button
+                className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
+                onClick={() => setOpen(open === i ? -1 : i)}
+              >
+                <span className={`font-bold text-base sm:text-lg ${open === i ? 'text-white' : 'text-gray-950'}`}>
+                  {faq.q}
+                </span>
+                <span className={`text-2xl font-light flex-shrink-0 ${open === i ? 'text-orange-400' : 'text-orange-500'}`}>
+                  {open === i ? '−' : '+'}
+                </span>
+              </button>
+              {open === i && (
+                <div className="px-6 pb-6">
+                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{faq.a}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a href="/contact" className="text-gray-500 hover:text-orange-500 text-sm underline underline-offset-4 transition-colors">
+            Have more questions? Contact us →
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}

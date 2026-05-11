@@ -7,6 +7,7 @@ import ReviewsCarousel from "@/components/ReviewsCarousel";
 import HowItWorks from "@/components/HowItWorks";
 import GallerySection from "@/components/GallerySection";
 import ServiceAreaSection from "@/components/ServiceAreaSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import HeroForm from "@/components/HeroForm";
 
@@ -82,6 +83,9 @@ export default function Home() {
 
       {/* How It Works */}
       <HowItWorks />
+
+      {/* FAQ */}
+      <FAQSection />
 
       {/* Gallery */}
       <GallerySection />
