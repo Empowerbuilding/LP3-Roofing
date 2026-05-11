@@ -91,7 +91,7 @@ export default function ServiceAreaSection() {
         </div>
 
         {/* Map + overlapping truck */}
-        <div className="relative" style={{ paddingBottom: '80px' }}>
+        <div className="relative" style={{ paddingBottom: '90px' }}>
           {/* Map — 3/4 width on desktop */}
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-800 w-full lg:w-3/4" style={{ height: '420px' }}>
             <div ref={mapContainerRef} className="w-full h-full" style={{ display: mapLoaded ? 'block' : 'none' }} />
@@ -104,7 +104,7 @@ export default function ServiceAreaSection() {
 
           {/* Truck — scroll-driven slide from right, overlapping map */}
           <div
-            className="hidden lg:block lg:absolute lg:bottom-[-40px] lg:right-0 lg:w-[62%]"
+            className="absolute bottom-[-30px] right-[-16px] w-[95%] sm:w-[80%] lg:w-[62%] lg:bottom-[-40px] lg:right-0"
             style={{
               transform: `translateX(${truckX}%)`,
               zIndex: 10,
@@ -121,16 +121,7 @@ export default function ServiceAreaSection() {
           </div>
         </div>
 
-        {/* Mobile truck — just shows below map, no animation */}
-        <div className="lg:hidden mt-6">
-          <Image
-            src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/truck-nobg.png"
-            alt="LP3 Roofing truck"
-            width={1654}
-            height={640}
-            className="w-full h-auto"
-          />
-        </div>
+
 
         {/* City pills */}
         <div className="flex flex-wrap gap-3 mt-8 justify-center">
