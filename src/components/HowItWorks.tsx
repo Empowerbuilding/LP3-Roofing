@@ -1,3 +1,5 @@
+'use client'
+import { useReveal } from '@/hooks/useReveal'
 import Link from 'next/link'
 
 const steps = [
@@ -34,19 +36,20 @@ const steps = [
 ]
 
 export default function HowItWorks() {
+  const ref = useReveal()
   return (
-    <section className="bg-gray-50 py-20">
+    <section ref={ref as React.RefObject<HTMLElement>} className="bg-gray-50 py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">Simple Process</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950">Get Your Roof Fixed in 3 Easy Steps</h2>
+          <p className="reveal text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">Simple Process</p>
+          <h2 className="reveal delay-100 text-3xl sm:text-4xl font-extrabold text-gray-950">Get Your Roof Fixed in 3 Easy Steps</h2>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4">
           {steps.map((step, i) => (
             <div
               key={i}
-              className="rounded-2xl px-8 py-8 text-center flex flex-col items-center gap-3 flex-1"
+              className="reveal rounded-2xl px-8 py-8 text-center flex flex-col items-center gap-3 flex-1"
               style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)' }}
             >
               <div className="text-orange-500">{step.icon}</div>

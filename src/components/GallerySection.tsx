@@ -1,3 +1,5 @@
+'use client'
+import { useReveal } from '@/hooks/useReveal'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -13,12 +15,13 @@ const photos = [
 ]
 
 export default function GallerySection() {
+  const ref = useReveal()
   return (
-    <section className="bg-white py-20">
+    <section ref={ref as React.RefObject<HTMLElement>} className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">Recent Roofing Projects</p>
+          <p className="reveal text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">Recent Roofing Projects</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950 mb-3">Our Work Speaks For Itself</h2>
           <Link href="/gallery" className="text-gray-500 hover:text-orange-500 text-sm underline underline-offset-4 transition-colors duration-200">
             View Our Gallery →

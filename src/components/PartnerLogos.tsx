@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useReveal } from '@/hooks/useReveal'
 
 const logos = [
   { name: 'Atlas Roofing', src: 'https://static.wixstatic.com/media/fdf3af_a4f2cbd198ec405ab054db29f3705940~mv2.png/v1/fill/w_200,h_133,al_c,q_85,enc_avif,quality_auto/atlas-logo.png', width: 200, height: 133 },
@@ -11,11 +12,13 @@ const logos = [
   { name: 'American Family Insurance', src: 'https://static.wixstatic.com/media/fdf3af_76f0b13396b1409284baf44db053957e~mv2.jpg/v1/fill/w_234,h_105,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/American-Family-Insurance-Logo.jpg', width: 234, height: 105 },
 ]
 
+'use client'
 export default function PartnerLogos() {
+  const ref = useReveal()
   return (
-    <section className="bg-gray-50 py-14 border-y border-gray-100">
+    <section ref={ref as React.RefObject<HTMLElement>} className="bg-gray-50 py-14 border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">Our Trusted Partners</p>
+        <p className="reveal text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">Our Trusted Partners</p>
         {/* Desktop: single row | Mobile: staggered 4-4 */}
         <div className="hidden md:grid md:grid-cols-8 items-center gap-6">
           {logos.map((logo) => (

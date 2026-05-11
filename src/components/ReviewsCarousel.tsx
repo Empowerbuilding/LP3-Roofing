@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { useReveal } from '@/hooks/useReveal'
 
 const reviews = [
   {
@@ -43,6 +44,7 @@ function Stars() {
 }
 
 export default function ReviewsCarousel() {
+  const ref = useReveal()
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
@@ -55,10 +57,10 @@ export default function ReviewsCarousel() {
   const review = reviews[current]
 
   return (
-    <section className="bg-white py-20">
+    <section ref={ref as React.RefObject<HTMLElement>} className="bg-white py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">5-Star Reviews</p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950 mb-2">Real Customer Reviews</h2>
+        <p className="reveal text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">5-Star Reviews</p>
+        <h2 className="reveal delay-100 text-3xl sm:text-4xl font-extrabold text-gray-950 mb-2">Real Customer Reviews</h2>
         <a
           href="https://www.google.com/maps/search/LP3+Roofing+Fort+Worth"
           target="_blank"
@@ -69,7 +71,7 @@ export default function ReviewsCarousel() {
         </a>
 
         {/* Card */}
-        <div className="mt-10 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden transition-all duration-500">
+        <div className="reveal delay-200 mt-10 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden transition-all duration-500">
           {/* Header bar */}
           <div className="bg-gray-950 px-6 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">

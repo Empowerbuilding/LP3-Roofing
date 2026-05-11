@@ -1,9 +1,12 @@
+'use client'
+import { useReveal } from '@/hooks/useReveal'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function WarrantySection() {
+  const ref = useReveal()
   return (
-    <section className="bg-gray-950">
+    <section ref={ref as React.RefObject<HTMLElement>} className="bg-gray-950">
       <div className="max-w-7xl mx-auto">
 
         {/* Mobile: photo on top, text below — stacked in dark card */}
@@ -56,13 +59,13 @@ export default function WarrantySection() {
 function WarrantyContent() {
   return (
     <div className="max-w-lg">
-      <p className="text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-4">
+      <p className="reveal from-left text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-4">
         Fort Worth&apos;s Trusted Roofing Experts
       </p>
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
+      <h2 className="reveal from-left delay-100 text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
         Industry-Leading Warranties On Every Roof We Install
       </h2>
-      <p className="text-gray-400 text-base leading-relaxed mb-8">
+      <p className="reveal from-left delay-200 text-gray-400 text-base leading-relaxed mb-8">
         When LP3 Roofing installs your roof, you get more than shingles — you get peace of mind.
         We use only premium manufacturer materials backed by lifetime warranties covering both
         materials and workmanship. Our crew is licensed, insured, and trained to meet the exact
