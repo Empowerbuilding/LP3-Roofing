@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b-2 border-orange-500 shadow-lg" style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-36">
+        <div className="flex items-center justify-between h-24 md:h-36">
 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -30,7 +30,7 @@ export default function Navbar() {
               alt="LP3 Roofing & Construction"
               width={160}
               height={96}
-              className="h-24 w-auto object-contain"
+              className="h-16 md:h-24 w-auto object-contain"
               style={{ mixBlendMode: 'lighten' }}
             />
           </Link>
