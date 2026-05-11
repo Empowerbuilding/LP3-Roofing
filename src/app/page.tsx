@@ -84,7 +84,7 @@ export default function Home() {
       {/* How It Works */}
       <HowItWorks />
 
-      {/* Gallery */
+      {/* Gallery */}
       <GallerySection />
 
       {/* Service Area */}
