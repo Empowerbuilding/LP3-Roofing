@@ -91,12 +91,12 @@ export default function ServiceAreaSection() {
         </div>
 
         {/* Map + overlapping truck */}
-        <div className="relative" style={{ paddingBottom: '90px' }}>
+        <div className="relative" style={{ paddingBottom: '100px' }}>
           {/* Map — 3/4 width on desktop */}
-          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-800 w-full lg:w-3/4" style={{ height: '420px' }}>
-            <div ref={mapContainerRef} className="w-full h-full" style={{ display: mapLoaded ? 'block' : 'none' }} />
+          <div className="rounded-2xl shadow-2xl border border-gray-800 w-full lg:w-3/4" style={{ position: "relative", zIndex: 1 }} style={{ height: '420px' }}>
+            <div ref={mapContainerRef} className="w-full h-full rounded-2xl overflow-hidden" style={{ display: mapLoaded ? 'block' : 'none' }} />
             {!mapLoaded && (
-              <div className="w-full h-full flex items-center justify-center bg-gray-900">
+              <div className="w-full h-full rounded-2xl overflow-hidden flex items-center justify-center bg-gray-900">
                 <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
               </div>
             )}
@@ -104,10 +104,10 @@ export default function ServiceAreaSection() {
 
           {/* Truck — scroll-driven slide from right, overlapping map */}
           <div
-            className="absolute bottom-[-30px] right-[-16px] w-[95%] sm:w-[80%] lg:w-[62%] lg:bottom-[-40px] lg:right-0"
+            className="absolute bottom-[-20px] right-[-8px] w-[90%] sm:w-[80%] lg:w-[62%] lg:bottom-[-40px] lg:right-0"
             style={{
               transform: `translateX(${truckX}%)`,
-              zIndex: 10,
+              zIndex: 20,
               willChange: 'transform',
             }}
           >
