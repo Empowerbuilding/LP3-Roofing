@@ -25,9 +25,9 @@ export default function Navbar() {
             <Image
               src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/logo-v2.jpg"
               alt="LP3 Roofing & Construction"
-              width={500}
-              height={176}
-              className="h-48 w-auto object-contain"
+              width={160}
+              height={80}
+              className="h-20 w-auto object-contain"
             />
           </Link>
 

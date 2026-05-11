@@ -11,9 +11,9 @@ export default function Footer() {
             <Image
               src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/logo-v2.jpg"
               alt="LP3 Roofing & Construction"
-              width={500}
-              height={192}
-              className="h-36 w-auto object-contain mb-4"
+              width={160}
+              height={80}
+              className="h-20 w-auto object-contain mb-4"
             />
             <p className="text-sm text-gray-400 max-w-sm">
               Fort Worth&apos;s most trusted roofing contractor. Licensed, insured, and committed to quality craftsmanship on every job.
