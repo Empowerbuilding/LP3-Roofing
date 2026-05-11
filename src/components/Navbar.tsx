@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const services = [
   { name: 'Storm Damage', href: '/services/storm-damage' },
@@ -16,14 +17,18 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-black border-b border-gray-800 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <span className="text-xl font-bold text-gray-950 tracking-tight">
-              LP3 Roofing
-            </span>
+            <Image
+              src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/logo.jpg"
+              alt="LP3 Roofing & Construction"
+              width={120}
+              height={48}
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -31,7 +36,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-gray-950 transition-colors duration-200"
+                className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Services
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -40,14 +45,14 @@ export default function Navbar() {
               </button>
               {servicesOpen && (
                 <div
-                  className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-100 py-1"
+                  className="absolute top-full left-0 mt-1 w-48 bg-gray-900 rounded-md shadow-lg border border-gray-700 py-1"
                   onMouseLeave={() => setServicesOpen(false)}
                 >
                   {services.map((s) => (
                     <Link
                       key={s.href}
                       href={s.href}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-950 transition-colors duration-200"
+                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors duration-200"
                       onClick={() => setServicesOpen(false)}
                     >
                       {s.name}
@@ -56,13 +61,13 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <Link href="/gallery" className="text-sm font-medium text-gray-700 hover:text-gray-950 transition-colors duration-200">
+            <Link href="/gallery" className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">
               Gallery
             </Link>
-            <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-gray-950 transition-colors duration-200">
+            <Link href="/about" className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">
               About
             </Link>
-            <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-gray-950 transition-colors duration-200">
+            <Link href="/contact" className="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">
               Contact
             </Link>
           </div>
@@ -76,7 +81,7 @@ export default function Navbar() {
               Free Inspection
             </Link>
             <button
-              className="md:hidden p-2 text-gray-700 hover:text-gray-950"
+              className="md:hidden p-2 text-gray-300 hover:text-white"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
@@ -96,22 +101,22 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-1">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider px-2 pb-1">Services</p>
+        <div className="md:hidden bg-black border-t border-gray-800 px-4 py-4 space-y-1">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2 pb-1">Services</p>
           {services.map((s) => (
             <Link
               key={s.href}
               href={s.href}
-              className="block px-2 py-2 text-sm text-gray-700 hover:text-gray-950 transition-colors duration-200"
+              className="block px-2 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-200"
               onClick={() => setMobileOpen(false)}
             >
               {s.name}
             </Link>
           ))}
-          <div className="border-t border-gray-100 pt-2 mt-2 space-y-1">
-            <Link href="/gallery" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-gray-950 transition-colors duration-200" onClick={() => setMobileOpen(false)}>Gallery</Link>
-            <Link href="/about" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-gray-950 transition-colors duration-200" onClick={() => setMobileOpen(false)}>About</Link>
-            <Link href="/contact" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-gray-950 transition-colors duration-200" onClick={() => setMobileOpen(false)}>Contact</Link>
+          <div className="border-t border-gray-800 pt-2 mt-2 space-y-1">
+            <Link href="/gallery" className="block px-2 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" onClick={() => setMobileOpen(false)}>Gallery</Link>
+            <Link href="/about" className="block px-2 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/contact" className="block px-2 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" onClick={() => setMobileOpen(false)}>Contact</Link>
           </div>
           <div className="pt-2">
             <Link

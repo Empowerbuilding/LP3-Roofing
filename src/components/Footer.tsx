@@ -1,14 +1,21 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-300">
+    <footer className="bg-black text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <span className="text-2xl font-bold text-white">LP3 Roofing</span>
-            <p className="mt-3 text-sm text-gray-400 max-w-sm">
+            <Image
+              src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/logo.jpg"
+              alt="LP3 Roofing & Construction"
+              width={160}
+              height={64}
+              className="h-14 w-auto object-contain mb-4"
+            />
+            <p className="text-sm text-gray-400 max-w-sm">
               Fort Worth&apos;s most trusted roofing contractor. Licensed, insured, and committed to quality craftsmanship on every job.
             </p>
             <p className="mt-4 text-orange-500 font-semibold text-lg">
