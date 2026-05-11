@@ -44,9 +44,9 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex items-center min-h-screen bg-gray-800">
+      <section className="relative flex items-center min-h-[auto] lg:min-h-screen bg-gray-800">
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Headline + subtext + phone */}
             <div>

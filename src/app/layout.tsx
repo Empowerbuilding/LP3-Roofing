@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import FloatingCTA from "@/components/FloatingCTA";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-white text-gray-950 font-sans antialiased">
         <Navbar />
         <div className="flex flex-col flex-1">{children}</div>
+        <FloatingCTA />
       </body>
     </html>
   );

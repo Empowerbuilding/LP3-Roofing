@@ -104,42 +104,27 @@ export default function HeroForm() {
       </div>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="px-6 py-5 flex flex-col gap-3">
-        {/* Name + Email side by side */}
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="block text-xs font-medium text-gray-700 mb-1">Name *</label>
-            <input name="name" type="text" required placeholder="John Smith" className={inputClass} />
-          </div>
-          <div>
-            <label className="block text-xs font-medium text-gray-700 mb-1">Email *</label>
-            <input name="email" type="email" required placeholder="john@email.com" className={inputClass} />
-          </div>
+      <form onSubmit={handleSubmit} className="px-4 py-4 sm:px-6 sm:py-5 flex flex-col gap-3">
+        {/* Name + Email side by side on sm+ */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <input name="name" type="text" required placeholder="Your Name *" className={inputClass} />
+          <input name="email" type="email" required placeholder="Email Address *" className={inputClass} />
         </div>
 
         {/* Phone */}
-        <div>
-          <label className="block text-xs font-medium text-gray-700 mb-1">Phone *</label>
-          <input name="phone" type="tel" required placeholder="(817) 555-0000" className={inputClass} />
-        </div>
+        <input name="phone" type="tel" required placeholder="Phone Number *" className={inputClass} />
 
         {/* Service dropdown */}
-        <div>
-          <label className="block text-xs font-medium text-gray-700 mb-1">Select Service *</label>
-          <select name="service" required className={inputClass + " bg-white"}>
-            <option value="">Select a service...</option>
-            <option value="Roof Replacement">Roof Replacement</option>
-            <option value="Roof Repair">Roof Repair</option>
-            <option value="Gutter Install">Gutter Install</option>
-            <option value="Roof Cleaning">Roof Cleaning</option>
-          </select>
-        </div>
+        <select name="service" required className={inputClass + " bg-white"}>
+          <option value="">Select a Service...</option>
+          <option value="Roof Replacement">Roof Replacement</option>
+          <option value="Roof Repair">Roof Repair</option>
+          <option value="Gutter Install">Gutter Install</option>
+          <option value="Roof Cleaning">Roof Cleaning</option>
+        </select>
 
         {/* Message */}
-        <div>
-          <label className="block text-xs font-medium text-gray-700 mb-1">Your Message</label>
-          <textarea name="message" rows={3} placeholder="Tell us about your roofing needs..." className={inputClass + " resize-none"} />
-        </div>
+        <textarea name="message" rows={3} placeholder="Tell us about your roofing needs..." className={inputClass + " resize-none"} />
 
         {status === 'error' && <p className="text-red-600 text-xs">{errorMsg}</p>}
 
