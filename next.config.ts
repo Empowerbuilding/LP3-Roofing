@@ -3,10 +3,8 @@ const nextConfig: NextConfig = {
   output: "standalone",
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "dwwfegzxjccqfrtgspzx.supabase.co",
-      },
+      { protocol: "https", hostname: "dwwfegzxjccqfrtgspzx.supabase.co" },
+      { protocol: "https", hostname: "static.wixstatic.com" },
     ],
   },
 };

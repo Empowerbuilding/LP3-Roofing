@@ -1,5 +1,6 @@
 import Link from "next/link";
 import TrustBadges from "@/components/TrustBadges";
+import PartnerLogos from "@/components/PartnerLogos";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 import HeroForm from "@/components/HeroForm";
@@ -92,6 +93,9 @@ export default function Home() {
 
       {/* Trust Badges */}
       <TrustBadges />
+
+      {/* Partner Logos */}
+      <PartnerLogos />
 
       {/* Services Row */}
       <section className="bg-gray-950 py-10">
