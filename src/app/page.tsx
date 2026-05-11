@@ -84,14 +84,14 @@ export default function Home() {
       {/* How It Works */}
       <HowItWorks />
 
-      {/* FAQ */}
-      <FAQSection />
-
-      {/* Gallery */}
+      {/* Gallery */
       <GallerySection />
 
       {/* Service Area */}
       <ServiceAreaSection />
+
+      {/* FAQ */}
+      <FAQSection />
 
       <CTABanner />
       <Footer />
