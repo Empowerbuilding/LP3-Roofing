@@ -1,4 +1,5 @@
 'use client'
+import React from 'react'
 import Image from 'next/image'
 import { useReveal } from '@/hooks/useReveal'
 
@@ -13,7 +14,6 @@ const logos = [
   { name: 'American Family Insurance', src: 'https://static.wixstatic.com/media/fdf3af_76f0b13396b1409284baf44db053957e~mv2.jpg/v1/fill/w_234,h_105,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/American-Family-Insurance-Logo.jpg', width: 234, height: 105 },
 ]
 
-'use client'
 export default function PartnerLogos() {
   const ref = useReveal()
   return (
