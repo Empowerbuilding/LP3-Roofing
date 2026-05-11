@@ -42,11 +42,11 @@ export default function HowItWorks() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950">Get Your Roof Fixed in 3 Easy Steps</h2>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col sm:flex-row gap-4">
           {steps.map((step, i) => (
             <div
               key={i}
-              className="rounded-2xl px-8 py-8 text-center flex flex-col items-center gap-3"
+              className="rounded-2xl px-8 py-8 text-center flex flex-col items-center gap-3 flex-1"
               style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)' }}
             >
               <div className="text-orange-500">{step.icon}</div>
