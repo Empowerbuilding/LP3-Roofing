@@ -28,19 +28,18 @@ export default function GallerySection() {
           </Link>
         </div>
 
-        {/* Photo grid — 3 cols desktop, 2 cols mobile */}
+        {/* Photo grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {/* Large featured photo spans 2 cols */}
+          {/* Top row: large left (spans 2) + tall right */}
           <div className="col-span-2 sm:col-span-2 relative h-64 sm:h-80 rounded-2xl overflow-hidden">
             <Image src={photos[0].src} alt={photos[0].alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
           </div>
-          {/* Tall right photo */}
           <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden">
             <Image src={photos[1].src} alt={photos[1].alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
           </div>
-          {/* Bottom row — 3 equal */}
+          {/* Bottom row: 3 equal columns */}
           {photos.slice(2, 5).map((photo, i) => (
-            <div key={i} className="relative h-48 sm:h-56 rounded-2xl overflow-hidden">
+            <div key={i} className="relative h-52 sm:h-60 rounded-2xl overflow-hidden">
               <Image src={photo.src} alt={photo.alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
             </div>
           ))}
