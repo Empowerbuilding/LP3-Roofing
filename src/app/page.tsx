@@ -1,5 +1,4 @@
 import Link from "next/link";
-import TrustBadges from "@/components/TrustBadges";
 import PartnerLogos from "@/components/PartnerLogos";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
@@ -91,8 +90,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Badges */}
-      <TrustBadges />
 
       {/* Partner Logos */}
       <PartnerLogos />
