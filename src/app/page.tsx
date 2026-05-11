@@ -49,7 +49,7 @@ export default function Home() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Headline + subtext + phone */}
-            <div>
+            <div className="text-center lg:text-left">
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
                 Fort Worth&apos;s{" "}
                 <span className="text-orange-500">#1 Rated</span>
@@ -62,7 +62,7 @@ export default function Home() {
               </p>
               <a
                 href="tel:8175550100"
-                className="mt-4 lg:mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 lg:bg-transparent lg:hover:bg-transparent text-white lg:hover:text-orange-400 font-bold rounded-full px-5 py-2.5 lg:px-0 lg:py-0 lg:rounded-none transition-colors duration-200"
+                className="mt-4 lg:mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 lg:bg-transparent lg:hover:bg-transparent text-white lg:hover:text-orange-400 font-bold rounded-full px-5 py-2.5 lg:px-0 lg:py-0 lg:rounded-none transition-colors duration-200 mx-auto lg:mx-0"
               >
                 <div className="flex items-center justify-center w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white/20 lg:bg-orange-500 flex-shrink-0">
                   <svg className="w-4 h-4 lg:w-5 lg:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
