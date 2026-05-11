@@ -90,24 +90,32 @@ export default function ServiceAreaSection() {
           </p>
         </div>
 
-        {/* Map + overlapping truck */}
-        <div className="relative" style={{ paddingBottom: '100px' }}>
-          {/* Map — 3/4 width on desktop */}
-          <div className="rounded-2xl shadow-2xl border border-gray-800 w-full lg:w-3/4" style={{ position: "relative", zIndex: 1, height: "420px" }}>
-            <div ref={mapContainerRef} className="w-full h-full rounded-2xl overflow-hidden" style={{ display: mapLoaded ? 'block' : 'none' }} />
-            {!mapLoaded && (
-              <div className="w-full h-full rounded-2xl overflow-hidden flex items-center justify-center bg-gray-900">
-                <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
-              </div>
-            )}
-          </div>
+        {/* Map */}
+        <div className="rounded-2xl shadow-2xl border border-gray-800 w-full lg:w-3/4" style={{ height: '420px', position: 'relative', zIndex: 1 }}>
+          <div ref={mapContainerRef} className="w-full h-full rounded-2xl overflow-hidden" style={{ display: mapLoaded ? 'block' : 'none' }} />
+          {!mapLoaded && (
+            <div className="w-full h-full rounded-2xl overflow-hidden flex items-center justify-center bg-gray-900">
+              <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
+            </div>
+          )}
+        </div>
 
-          {/* Truck — scroll-driven slide from right, overlapping map */}
+        {/* Truck — mobile: negative margin pulls it up over map. Desktop: absolute */}
+        <div className="relative lg:hidden" style={{ marginTop: '-50px', zIndex: 20 }}>
+          <Image
+            src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/truck-nobg.png"
+            alt="LP3 Roofing truck"
+            width={1654}
+            height={640}
+            className="w-full h-auto"
+          />
+        </div>
+
+        {/* Desktop truck — absolute overlap */}
+        <div className="hidden lg:block" style={{ position: 'relative', zIndex: 20, marginTop: '-100px', marginLeft: '35%' }}>
           <div
-            className="absolute bottom-[-20px] right-[-8px] w-[90%] sm:w-[80%] lg:w-[62%] lg:bottom-[-40px] lg:right-0"
             style={{
               transform: `translateX(${truckX}%)`,
-              zIndex: 20,
               willChange: 'transform',
             }}
           >
