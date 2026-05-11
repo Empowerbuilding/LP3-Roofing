@@ -5,14 +5,6 @@ import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 import HeroForm from "@/components/HeroForm";
 
-const serviceLinks = [
-  { title: "Storm Damage", href: "/services/storm-damage" },
-  { title: "Roof Replacement", href: "/services/roof-replacement" },
-  { title: "Roof Repair", href: "/services/roof-repair" },
-  { title: "Commercial Roofing", href: "/services/commercial" },
-  { title: "Gutters", href: "/services/gutters" },
-  { title: "Free Inspection", href: "/contact" },
-];
 
 const testimonials = [
   {
@@ -97,23 +89,6 @@ export default function Home() {
 
       {/* Services */}
       <ServicesSection />
-
-      {/* Services Row */}
-      <section className="bg-gray-950 py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3">
-            {serviceLinks.map((s) => (
-              <Link
-                key={s.title}
-                href={s.href}
-                className="px-6 py-3 border border-gray-600 text-gray-200 rounded-full text-sm font-semibold hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-200 whitespace-nowrap"
-              >
-                {s.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why LP3 */}
       <section className="bg-gray-50 py-24">
