@@ -62,7 +62,7 @@ export default function Home() {
               </p>
               <a
                 href="tel:8175550100"
-                className="mt-4 lg:mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 lg:bg-transparent lg:hover:bg-transparent text-white lg:hover:text-orange-400 font-bold rounded-full px-5 py-2.5 lg:px-0 lg:py-0 lg:rounded-none transition-colors duration-200 mx-auto lg:mx-0"
+                className="mt-4 lg:mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 lg:bg-transparent lg:hover:bg-transparent text-white lg:hover:text-orange-400 font-bold rounded-full px-4 py-1.5 lg:px-0 lg:py-0 lg:rounded-none transition-colors duration-200 mx-auto lg:mx-0 text-sm lg:text-base"
               >
                 <div className="flex items-center justify-center w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white/20 lg:bg-orange-500 flex-shrink-0">
                   <svg className="w-4 h-4 lg:w-5 lg:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
