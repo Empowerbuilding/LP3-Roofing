@@ -16,8 +16,18 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex items-center min-h-[auto] lg:min-h-screen bg-gray-800">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+      <section className="relative flex items-center min-h-[auto] lg:min-h-screen overflow-hidden">
+        {/* Video background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Headline + subtext + phone */}
