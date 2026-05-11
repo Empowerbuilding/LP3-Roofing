@@ -13,7 +13,7 @@ const logos = [
 
 export default function PartnerLogos() {
   return (
-    <section className="bg-gray-50 py-12 border-y border-gray-100">
+    <section className="bg-gray-50 py-14 border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">Our Trusted Partners</p>
         {/* Desktop: single row | Mobile: staggered 4-4 */}
@@ -37,7 +37,7 @@ export default function PartnerLogos() {
             {logos.slice(0, 4).map((logo) => (
               <div key={logo.name} className="flex items-center justify-center">
                 <Image src={logo.src} alt={logo.name} width={logo.width} height={logo.height}
-                  className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                  className="h-11 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
               </div>
             ))}
           </div>
@@ -45,7 +45,7 @@ export default function PartnerLogos() {
             {logos.slice(4).map((logo) => (
               <div key={logo.name} className="flex items-center justify-center">
                 <Image src={logo.src} alt={logo.name} width={logo.width} height={logo.height}
-                  className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                  className="h-11 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
               </div>
             ))}
           </div>
