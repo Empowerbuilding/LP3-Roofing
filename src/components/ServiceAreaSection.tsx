@@ -101,7 +101,7 @@ export default function ServiceAreaSection() {
         </div>
 
         {/* Truck — mobile: negative margin pulls it up over map. Desktop: absolute */}
-        <div className="relative lg:hidden" style={{ marginTop: '-50px', zIndex: 20, transform: `translateX(${truckX}%)`, transition: 'transform 0.1s linear', willChange: 'transform' }}>
+        <div className="relative lg:hidden" style={{ marginTop: '-90px', zIndex: 20, transform: `translateX(${truckX}%)`, transition: 'transform 0.1s linear', willChange: 'transform' }}>
           <Image
             src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/truck-nobg.png"
             alt="LP3 Roofing truck"
@@ -112,7 +112,7 @@ export default function ServiceAreaSection() {
         </div>
 
         {/* Desktop truck — absolute overlap */}
-        <div className="hidden lg:block" style={{ position: 'relative', zIndex: 20, marginTop: '-100px', marginLeft: '35%' }}>
+        <div className="hidden lg:block" style={{ position: 'relative', zIndex: 20, marginTop: '-140px', marginLeft: '35%' }}>
           <div
             style={{
               transform: `translateX(${truckX}%)`,
