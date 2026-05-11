@@ -3,9 +3,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
-declare global {
-  interface Window { google: typeof google }
-}
 
 let googleMapsPromise: Promise<void> | null = null
 function loadGoogleMaps(apiKey: string): Promise<void> {
