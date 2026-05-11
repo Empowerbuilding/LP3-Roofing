@@ -111,12 +111,8 @@ export default function ServiceAreaSection() {
 
           {/* Truck — absolutely positioned overlapping bottom-right of map, slides in from right */}
           <div
-            className="lg:absolute lg:bottom-[-60px] lg:right-0 mt-6 lg:mt-0 lg:w-[60%] transition-all duration-1000 ease-out"
-            style={{
-              transform: truckVisible ? 'translateX(0)' : 'translateX(100vw)',
-              opacity: truckVisible ? 1 : 0,
-              zIndex: 10,
-            }}
+            className={`lg:absolute lg:bottom-[-60px] lg:right-0 mt-6 lg:mt-0 lg:w-[60%] ${truckVisible ? 'truck-visible' : 'truck-hidden'}`}
+            style={{ zIndex: 10 }}
           >
             <Image
               src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/truck-nobg.png"
