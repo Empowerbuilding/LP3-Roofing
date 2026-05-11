@@ -74,6 +74,17 @@ export default function Navbar() {
 
           {/* CTA + hamburger */}
           <div className="flex items-center gap-4">
+            <a
+              href="tel:8175550100"
+              className="hidden md:flex items-center gap-2"
+            >
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-500">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z" />
+                </svg>
+              </span>
+              <span className="text-white font-bold text-sm">817-555-0100</span>
+            </a>
             <Link
               href="/contact"
               className="hidden md:inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold rounded-md transition-colors duration-200"
