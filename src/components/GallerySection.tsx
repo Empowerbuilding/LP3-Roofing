@@ -3,12 +3,13 @@ import Image from 'next/image'
 
 // Placeholder slots — replace src with real photos when provided
 const photos = [
-  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/inspection-photo.png', alt: 'LP3 Roofing Project 1' },
-  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/inspection-photo.png', alt: 'LP3 Roofing Project 2' },
-  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/inspection-photo.png', alt: 'LP3 Roofing Project 3' },
-  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/inspection-photo.png', alt: 'LP3 Roofing Project 4' },
-  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/inspection-photo.png', alt: 'LP3 Roofing Project 5' },
-  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/inspection-photo.png', alt: 'LP3 Roofing Project 6' },
+  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/gallery-1.webp', alt: 'LP3 Roofing Project 1' },
+  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/gallery-2.webp', alt: 'LP3 Roofing Project 2' },
+  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/gallery-3.webp', alt: 'LP3 Roofing Project 3' },
+  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/gallery-4.webp', alt: 'LP3 Roofing Project 4' },
+  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/gallery-5.webp', alt: 'LP3 Roofing Project 5' },
+  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/gallery-6.webp', alt: 'LP3 Roofing Project 6' },
+  { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/gallery-7.webp', alt: 'LP3 Roofing Project 7' },
 ]
 
 export default function GallerySection() {
