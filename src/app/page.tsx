@@ -4,6 +4,7 @@ import ServicesSection from "@/components/ServicesSection";
 import WarrantySection from "@/components/WarrantySection";
 import CTABanner from "@/components/CTABanner";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
+import HowItWorks from "@/components/HowItWorks";
 import Footer from "@/components/Footer";
 import HeroForm from "@/components/HeroForm";
 
@@ -66,6 +67,9 @@ export default function Home() {
 
       {/* Reviews */}
       <ReviewsCarousel />
+
+      {/* How It Works */}
+      <HowItWorks />
 
       <CTABanner />
       <Footer />
