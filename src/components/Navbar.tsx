@@ -27,7 +27,7 @@ export default function Navbar() {
               alt="LP3 Roofing & Construction"
               width={160}
               height={80}
-              className="h-20 w-auto object-contain"
+              className="h-36 w-auto object-contain"
             />
           </Link>
 
