@@ -13,7 +13,7 @@ export default function Footer() {
               alt="LP3 Roofing & Construction"
               width={160}
               height={80}
-              className="h-36 w-auto object-contain mb-4"
+              className="h-32 w-auto object-contain mb-4"
             />
             <p className="text-sm text-gray-400 max-w-sm">
               Fort Worth&apos;s most trusted roofing contractor. Licensed, insured, and committed to quality craftsmanship on every job.
