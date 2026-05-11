@@ -6,6 +6,7 @@ import CTABanner from "@/components/CTABanner";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import HowItWorks from "@/components/HowItWorks";
 import GallerySection from "@/components/GallerySection";
+import ServiceAreaSection from "@/components/ServiceAreaSection";
 import Footer from "@/components/Footer";
 import HeroForm from "@/components/HeroForm";
 
@@ -84,6 +85,9 @@ export default function Home() {
 
       {/* Gallery */}
       <GallerySection />
+
+      {/* Service Area */}
+      <ServiceAreaSection />
 
       <CTABanner />
       <Footer />
