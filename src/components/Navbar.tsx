@@ -12,12 +12,14 @@ const services = [
   { name: 'Gutters', href: '/services/gutters' },
 ]
 
+const navLinkClass = "text-base font-semibold text-gray-300 hover:text-orange-400 transition-colors duration-200 tracking-wide uppercase"
+
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 border-b-2 border-orange-500 shadow-lg" style={{background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)'}}>
+    <nav className="sticky top-0 z-50 border-b-2 border-orange-500 shadow-lg" style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-36">
 
@@ -28,7 +30,8 @@ export default function Navbar() {
               alt="LP3 Roofing & Construction"
               width={160}
               height={96}
-              className="h-24 w-auto object-contain" style={{mixBlendMode: "lighten"}}
+              className="h-24 w-auto object-contain"
+              style={{ mixBlendMode: 'lighten' }}
             />
           </Link>
 
@@ -37,7 +40,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center gap-1 text-base font-semibold text-gray-300 hover:text-orange-400 transition-colors duration-200 tracking-wide" style={{fontFamily: "var(--font-oswald)"}}
+                className={navLinkClass + " flex items-center gap-1"}
               >
                 Services
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -47,14 +50,14 @@ export default function Navbar() {
               {servicesOpen && (
                 <div
                   className="absolute top-full left-0 mt-2 w-52 rounded-lg shadow-xl border border-gray-700 py-1 overflow-hidden"
-                  style={{background: 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)'}}
+                  style={{ background: 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)' }}
                   onMouseLeave={() => setServicesOpen(false)}
                 >
                   {services.map((s) => (
                     <Link
                       key={s.href}
                       href={s.href}
-                      className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-300 hover:bg-orange-500 hover:text-white transition-colors duration-200"
+                      className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-300 hover:bg-orange-500 hover:text-white transition-colors duration-200 uppercase tracking-wide font-semibold"
                       onClick={() => setServicesOpen(false)}
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-orange-500 flex-shrink-0" />
@@ -64,14 +67,13 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <Link href="/gallery" className="text-base font-semibold text-gray-300 hover:text-orange-400 transition-colors duration-200 tracking-wide" style={{fontFamily: "var(--font-oswald)"}}>Gallery</Link>
-            <Link href="/about" className="text-base font-semibold text-gray-300 hover:text-orange-400 transition-colors duration-200 tracking-wide" style={{fontFamily: "var(--font-oswald)"}}>About</Link>
-            <Link href="/contact" className="text-base font-semibold text-gray-300 hover:text-orange-400 transition-colors duration-200 tracking-wide" style={{fontFamily: "var(--font-oswald)"}}>Contact</Link>
+            <Link href="/gallery" className={navLinkClass}>Gallery</Link>
+            <Link href="/about" className={navLinkClass}>About</Link>
+            <Link href="/contact" className={navLinkClass}>Contact</Link>
           </div>
 
           {/* Right: phone + CTA */}
           <div className="hidden md:flex items-center gap-4">
-            {/* Phone pill */}
             <a
               href="tel:8175550100"
               className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-orange-500 text-white rounded-full px-4 py-2 transition-all duration-200 group"
@@ -81,32 +83,22 @@ export default function Navbar() {
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                 </svg>
               </span>
-              <span className="text-base font-bold tracking-widest" style={{fontFamily: "var(--font-oswald)"}}>817-555-0100</span>
+              <span className="text-base font-bold tracking-widest uppercase">817-555-0100</span>
             </a>
-
-            {/* CTA button with glow */}
             <Link
               href="/contact"
-              className="relative inline-flex items-center px-5 py-2.5 bg-orange-500 hover:bg-orange-400 text-white text-base font-bold tracking-wide" style={{fontFamily: "var(--font-oswald)" rounded-lg transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.4)] hover:shadow-[0_0_25px_rgba(249,115,22,0.6)]"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500 hover:bg-orange-400 text-white text-base font-bold rounded-lg tracking-wide uppercase transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.4)] hover:shadow-[0_0_25px_rgba(249,115,22,0.6)]"
             >
               🔍 Free Inspection
             </Link>
           </div>
 
           {/* Hamburger */}
-          <button
-            className="md:hidden p-2 text-gray-300 hover:text-white"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
+          <button className="md:hidden p-2 text-gray-300 hover:text-white" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
             {mobileOpen ? (
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
             ) : (
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
             )}
           </button>
         </div>
@@ -114,23 +106,23 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-gray-800 px-4 py-4 space-y-1" style={{background: '#111'}}>
+        <div className="md:hidden border-t border-gray-800 px-4 py-4 space-y-1" style={{ background: '#111' }}>
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2 pb-1">Services</p>
           {services.map((s) => (
-            <Link key={s.href} href={s.href} className="flex items-center gap-2 px-2 py-2 text-sm text-gray-300 hover:text-orange-400 transition-colors duration-200" onClick={() => setMobileOpen(false)}>
+            <Link key={s.href} href={s.href} className="flex items-center gap-2 px-2 py-2 text-sm font-semibold text-gray-300 hover:text-orange-400 uppercase tracking-wide" onClick={() => setMobileOpen(false)}>
               <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />{s.name}
             </Link>
           ))}
           <div className="border-t border-gray-800 pt-2 mt-2 space-y-1">
-            <Link href="/gallery" className="block px-2 py-2 text-sm font-medium text-gray-300 hover:text-orange-400" onClick={() => setMobileOpen(false)}>Gallery</Link>
-            <Link href="/about" className="block px-2 py-2 text-sm font-medium text-gray-300 hover:text-orange-400" onClick={() => setMobileOpen(false)}>About</Link>
-            <Link href="/contact" className="block px-2 py-2 text-sm font-medium text-gray-300 hover:text-orange-400" onClick={() => setMobileOpen(false)}>Contact</Link>
+            <Link href="/gallery" className="block px-2 py-2 text-sm font-semibold text-gray-300 hover:text-orange-400 uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Gallery</Link>
+            <Link href="/about" className="block px-2 py-2 text-sm font-semibold text-gray-300 hover:text-orange-400 uppercase tracking-wide" onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/contact" className="block px-2 py-2 text-sm font-semibold text-gray-300 hover:text-orange-400 uppercase tracking-wide" onClick={() => setMobileOpen(false)}>Contact</Link>
           </div>
           <div className="pt-3 space-y-2">
-            <a href="tel:8175550100" className="flex items-center justify-center gap-2 w-full py-2.5 bg-gray-800 border border-gray-600 text-white text-sm font-bold rounded-lg" onClick={() => setMobileOpen(false)}>
+            <a href="tel:8175550100" className="flex items-center justify-center gap-2 w-full py-2.5 bg-gray-800 border border-gray-600 text-white text-sm font-bold rounded-lg uppercase tracking-wide">
               📞 817-555-0100
             </a>
-            <Link href="/contact" className="block w-full text-center px-4 py-2.5 bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold rounded-lg shadow-[0_0_15px_rgba(249,115,22,0.4)]" onClick={() => setMobileOpen(false)}>
+            <Link href="/contact" className="block w-full text-center px-4 py-2.5 bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold rounded-lg uppercase tracking-wide shadow-[0_0_15px_rgba(249,115,22,0.4)]" onClick={() => setMobileOpen(false)}>
               🔍 Free Inspection
             </Link>
           </div>
