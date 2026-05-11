@@ -29,7 +29,7 @@ export default function PartnerLogos() {
                 alt={logo.name}
                 width={logo.width}
                 height={logo.height}
-                className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                className="h-10 w-auto object-contain transition-all duration-300"
               />
             </div>
           ))}
@@ -41,7 +41,7 @@ export default function PartnerLogos() {
             {logos.slice(0, 4).map((logo) => (
               <div key={logo.name} className="flex items-center justify-center">
                 <Image src={logo.src} alt={logo.name} width={logo.width} height={logo.height}
-                  className="h-11 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                  className="h-11 w-auto object-contain transition-all duration-300" />
               </div>
             ))}
           </div>
@@ -49,7 +49,7 @@ export default function PartnerLogos() {
             {logos.slice(4).map((logo) => (
               <div key={logo.name} className="flex items-center justify-center">
                 <Image src={logo.src} alt={logo.name} width={logo.width} height={logo.height}
-                  className="h-11 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100" />
+                  className="h-11 w-auto object-contain transition-all duration-300" />
               </div>
             ))}
           </div>
