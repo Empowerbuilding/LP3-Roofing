@@ -28,7 +28,7 @@ export default function Navbar() {
               alt="LP3 Roofing & Construction"
               width={160}
               height={96}
-              className="h-24 w-auto object-contain"
+              className="h-24 w-auto object-contain" style={{mixBlendMode: "lighten"}}
             />
           </Link>
 
@@ -37,7 +37,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors duration-200"
+                className="flex items-center gap-1 text-base font-semibold text-gray-300 hover:text-orange-400 transition-colors duration-200 tracking-wide" style={{fontFamily: "var(--font-oswald)"}}
               >
                 Services
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,9 +64,9 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <Link href="/gallery" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors duration-200">Gallery</Link>
-            <Link href="/about" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors duration-200">About</Link>
-            <Link href="/contact" className="text-sm font-medium text-gray-300 hover:text-orange-400 transition-colors duration-200">Contact</Link>
+            <Link href="/gallery" className="text-base font-semibold text-gray-300 hover:text-orange-400 transition-colors duration-200 tracking-wide" style={{fontFamily: "var(--font-oswald)"}}>Gallery</Link>
+            <Link href="/about" className="text-base font-semibold text-gray-300 hover:text-orange-400 transition-colors duration-200 tracking-wide" style={{fontFamily: "var(--font-oswald)"}}>About</Link>
+            <Link href="/contact" className="text-base font-semibold text-gray-300 hover:text-orange-400 transition-colors duration-200 tracking-wide" style={{fontFamily: "var(--font-oswald)"}}>Contact</Link>
           </div>
 
           {/* Right: phone + CTA */}
@@ -81,13 +81,13 @@ export default function Navbar() {
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                 </svg>
               </span>
-              <span className="text-sm font-bold tracking-wide">817-555-0100</span>
+              <span className="text-base font-bold tracking-widest" style={{fontFamily: "var(--font-oswald)"}}>817-555-0100</span>
             </a>
 
             {/* CTA button with glow */}
             <Link
               href="/contact"
-              className="relative inline-flex items-center px-5 py-2.5 bg-orange-500 hover:bg-orange-400 text-white text-sm font-bold rounded-lg transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.4)] hover:shadow-[0_0_25px_rgba(249,115,22,0.6)]"
+              className="relative inline-flex items-center px-5 py-2.5 bg-orange-500 hover:bg-orange-400 text-white text-base font-bold tracking-wide" style={{fontFamily: "var(--font-oswald)" rounded-lg transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.4)] hover:shadow-[0_0_25px_rgba(249,115,22,0.6)]"
             >
               🔍 Free Inspection
             </Link>

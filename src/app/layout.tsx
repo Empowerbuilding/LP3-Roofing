@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${oswald.variable}`}>
       <body className="min-h-screen flex flex-col bg-white text-gray-950 font-sans antialiased">
         <Navbar />
         <div className="flex flex-col flex-1">{children}</div>
