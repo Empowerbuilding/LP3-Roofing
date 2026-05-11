@@ -93,7 +93,7 @@ export default function ServiceAreaSection() {
         {/* Map + overlapping truck */}
         <div className="relative" style={{ paddingBottom: '100px' }}>
           {/* Map — 3/4 width on desktop */}
-          <div className="rounded-2xl shadow-2xl border border-gray-800 w-full lg:w-3/4" style={{ position: "relative", zIndex: 1 }} style={{ height: '420px' }}>
+          <div className="rounded-2xl shadow-2xl border border-gray-800 w-full lg:w-3/4" style={{ position: "relative", zIndex: 1, height: "420px" }}>
             <div ref={mapContainerRef} className="w-full h-full rounded-2xl overflow-hidden" style={{ display: mapLoaded ? 'block' : 'none' }} />
             {!mapLoaded && (
               <div className="w-full h-full rounded-2xl overflow-hidden flex items-center justify-center bg-gray-900">
