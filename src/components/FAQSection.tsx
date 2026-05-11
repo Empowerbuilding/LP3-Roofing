@@ -1,7 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-import { useReveal } from '@/hooks/useReveal'
+import { useState, useEffect, useRef } from 'react'
 import React from 'react'
 
 const faqs = [
@@ -29,21 +28,29 @@ const faqs = [
 
 export default function FAQSection() {
   const [open, setOpen] = useState<number>(0)
-  const ref = useReveal()
+  const [visible, setVisible] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true) }, { threshold: 0.1 })
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} className="bg-white py-20">
+    <section ref={sectionRef} className="bg-white py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="reveal text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">FAQ</p>
-          <h2 className="reveal delay-100 text-3xl sm:text-4xl font-extrabold text-gray-950">Got Questions? We&apos;ve Got Answers.</h2>
+          <p className="text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease' }}>FAQ</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease 0.1s' }}>Got Questions? We&apos;ve Got Answers.</h2>
         </div>
 
         <div className="flex flex-col gap-4">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className={`reveal delay-${(i + 1) * 100} rounded-2xl border-2 overflow-hidden transition-all duration-300 ${
+              style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(24px)', transition: `all 0.5s ease ${i * 0.1}s` }}
+              className={`rounded-2xl border-2 overflow-hidden transition-colors duration-300 ${
                 open === i ? 'bg-gray-950 border-gray-950' : 'bg-white border-gray-200 hover:border-gray-400'
               }`}
             >
