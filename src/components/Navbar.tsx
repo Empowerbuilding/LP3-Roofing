@@ -94,7 +94,7 @@ export default function Navbar() {
           </div>
 
           {/* Hamburger */}
-          <button className="md:hidden p-2 text-gray-300 hover:text-white" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
+          <button className="md:hidden p-2 text-white bg-orange-500 hover:bg-orange-600 rounded-lg transition-colors duration-200" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
             {mobileOpen ? (
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
             ) : (
