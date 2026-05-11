@@ -23,16 +23,24 @@ export default function ServiceAreaSection() {
   const mapInitRef = useRef(false)
   const [mapLoaded, setMapLoaded] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
-  const [truckVisible, setTruckVisible] = useState(false)
+  const [truckX, setTruckX] = useState(100) // % offset from right, 100 = fully off screen
 
-  // Slide-in on scroll
+  // Scroll-driven truck animation
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setTruckVisible(true) },
-      { threshold: 0.05 }
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
+    const handleScroll = () => {
+      if (!sectionRef.current) return
+      const rect = sectionRef.current.getBoundingClientRect()
+      const windowH = window.innerHeight
+      // Start animating when section top hits bottom of screen
+      // Complete when section top hits center of screen
+      const start = windowH
+      const end = windowH * 0.3
+      const progress = Math.min(1, Math.max(0, (start - rect.top) / (start - end)))
+      setTruckX(100 - progress * 100)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   // Google Maps init
@@ -57,26 +65,13 @@ export default function ServiceAreaSection() {
         ],
       })
       new window.google.maps.Circle({
-        map,
-        center: { lat: 32.8, lng: -97.35 },
-        radius: 40000,
-        strokeColor: '#f97316',
-        strokeOpacity: 0.9,
-        strokeWeight: 3,
-        fillColor: '#f97316',
-        fillOpacity: 0.12,
+        map, center: { lat: 32.8, lng: -97.35 }, radius: 40000,
+        strokeColor: '#f97316', strokeOpacity: 0.9, strokeWeight: 3,
+        fillColor: '#f97316', fillOpacity: 0.12,
       })
       new window.google.maps.Marker({
-        position: { lat: 32.8, lng: -97.35 },
-        map,
-        icon: {
-          path: window.google.maps.SymbolPath.CIRCLE,
-          scale: 12,
-          fillColor: '#f97316',
-          fillOpacity: 1,
-          strokeColor: '#ffffff',
-          strokeWeight: 3,
-        },
+        position: { lat: 32.8, lng: -97.35 }, map,
+        icon: { path: window.google.maps.SymbolPath.CIRCLE, scale: 12, fillColor: '#f97316', fillOpacity: 1, strokeColor: '#ffffff', strokeWeight: 3 },
       })
       setMapLoaded(true)
     }).catch(() => {})
@@ -84,10 +79,9 @@ export default function ServiceAreaSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-gray-950 py-20">
+    <section ref={sectionRef} className="bg-gray-950 py-20" style={{ overflowX: 'clip' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Header */}
         <div className="text-center mb-12">
           <p className="text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">Service Area</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Proudly Serving North Fort Worth & DFW</h2>
@@ -97,9 +91,8 @@ export default function ServiceAreaSection() {
         </div>
 
         {/* Map + overlapping truck */}
-        <div className="relative">
-
-          {/* Map container — extra bottom padding so truck has room to overlap */}
+        <div className="relative" style={{ paddingBottom: '80px' }}>
+          {/* Map — 3/4 width on desktop */}
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-800 w-full lg:w-3/4" style={{ height: '420px' }}>
             <div ref={mapContainerRef} className="w-full h-full" style={{ display: mapLoaded ? 'block' : 'none' }} />
             {!mapLoaded && (
@@ -109,23 +102,38 @@ export default function ServiceAreaSection() {
             )}
           </div>
 
-          {/* Truck — absolutely positioned overlapping bottom-right of map, slides in from right */}
+          {/* Truck — scroll-driven slide from right, overlapping map */}
           <div
-            className={`lg:absolute lg:bottom-[-60px] lg:right-0 mt-6 lg:mt-0 lg:w-[60%] ${truckVisible ? 'truck-visible' : 'truck-hidden'}`}
-            style={{ zIndex: 10 }}
+            className="hidden lg:block lg:absolute lg:bottom-[-40px] lg:right-0 lg:w-[62%]"
+            style={{
+              transform: `translateX(${truckX}%)`,
+              zIndex: 10,
+              willChange: 'transform',
+            }}
           >
             <Image
               src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/truck-nobg.png"
               alt="LP3 Roofing truck"
               width={1654}
               height={640}
-              className="w-full h-auto drop-shadow-2xl"
+              className="w-full h-auto"
             />
           </div>
         </div>
 
+        {/* Mobile truck — just shows below map, no animation */}
+        <div className="lg:hidden mt-6">
+          <Image
+            src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/truck-nobg.png"
+            alt="LP3 Roofing truck"
+            width={1654}
+            height={640}
+            className="w-full h-auto"
+          />
+        </div>
+
         {/* City pills */}
-        <div className="flex flex-wrap gap-3 mt-24 lg:mt-20 justify-center">
+        <div className="flex flex-wrap gap-3 mt-8 justify-center">
           {['Fort Worth', 'Keller', 'Saginaw', 'Haslet', 'Azle', 'North Richland Hills', 'Watauga', 'Haltom City'].map((city) => (
             <span key={city} className="flex items-center gap-2 text-gray-300 text-sm bg-gray-900 px-4 py-2 rounded-full border border-gray-800">
               <span className="w-2 h-2 rounded-full bg-orange-500 inline-block" />
