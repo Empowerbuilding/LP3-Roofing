@@ -92,10 +92,10 @@ export default function ServiceAreaSection() {
         </div>
 
         {/* Map */}
-        <div className="rounded-2xl shadow-2xl border border-gray-800 w-full lg:w-3/4" style={{ height: '420px', position: 'relative', zIndex: 1 }}>
+        <div className="rounded-2xl shadow-2xl border border-gray-700 w-full lg:w-3/4" style={{ height: '420px', position: 'relative', zIndex: 1 }}>
           <div ref={mapContainerRef} className="w-full h-full rounded-2xl overflow-hidden" style={{ display: mapLoaded ? 'block' : 'none' }} />
           {!mapLoaded && (
-            <div className="w-full h-full rounded-2xl overflow-hidden flex items-center justify-center bg-gray-900">
+            <div className="w-full h-full rounded-2xl overflow-hidden flex items-center justify-center bg-black">
               <div className="w-10 h-10 border-4 border-gray-700 border-t-transparent rounded-none animate-spin" />
             </div>
           )}
@@ -135,8 +135,8 @@ export default function ServiceAreaSection() {
         {/* City pills */}
         <div className="flex flex-wrap gap-3 mt-8 justify-center">
           {['Fort Worth', 'Keller', 'Saginaw', 'Haslet', 'Azle', 'North Richland Hills', 'Watauga', 'Haltom City'].map((city) => (
-            <span key={city} className="flex items-center gap-2 text-gray-300 text-sm bg-gray-900 px-4 py-2 rounded-none border border-gray-800">
-              <span className="w-2 h-2 rounded-none bg-gray-900 inline-block" />
+            <span key={city} className="flex items-center gap-2 text-gray-300 text-sm bg-black px-4 py-2 rounded-none border border-gray-700">
+              <span className="w-2 h-2 rounded-none bg-black inline-block" />
               {city}
             </span>
           ))}
