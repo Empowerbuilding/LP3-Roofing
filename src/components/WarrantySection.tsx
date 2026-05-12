@@ -63,13 +63,13 @@ function WarrantyContent() {
         Fort Worth&apos;s Trusted Roofing Experts
       </p>
       <h2 className="font-display reveal from-left delay-100 text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
-        Industry-Leading Warranties On Every Roof We Install
+        6-Year Workmanship Warranty On Every Roof We Install
       </h2>
       <p className="reveal from-left delay-200 text-gray-400 text-base leading-relaxed mb-8">
         When LP3 Roofing installs your roof, you get more than shingles — you get peace of mind.
-        We use only premium manufacturer materials backed by lifetime warranties covering both
-        materials and workmanship. Our crew is licensed, insured, and trained to meet the exact
-        installation standards required to keep your warranty valid for life.
+        LP3 Roofing backs every installation with a 6-year workmanship warranty — and because
+        we're certified through leading manufacturers, you also get access to extended manufacturer
+        warranties on the roof system itself. Licensed, insured, and built to last.
       </p>
       <div className="flex flex-wrap gap-4">
         <Link href="/about" className="px-7 py-3 font-bold text-sm uppercase tracking-wide transition-all duration-200" style={{ background: "#111", color: "#fff", border: "2px solid #111" }}>
