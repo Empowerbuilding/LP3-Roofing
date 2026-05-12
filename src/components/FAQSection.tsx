@@ -50,7 +50,7 @@ export default function FAQSection() {
             <div
               key={i}
               style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(24px)', transition: `all 0.5s ease ${i * 0.1}s` }}
-              className={`rounded-2xl border-2 overflow-hidden transition-colors duration-300 ${
+              className={`border-2 overflow-hidden transition-colors duration-300 ${
                 open === i ? 'bg-black border-black' : 'bg-white border-gray-200 hover:border-gray-400'
               }`}
             >
