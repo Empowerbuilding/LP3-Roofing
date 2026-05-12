@@ -131,7 +131,7 @@ export default function HeroForm() {
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="w-full bg-gray-900 hover:bg-gray-800 disabled:bg-gray-400 text-white font-bold py-3 rounded-none transition-colors duration-200"
+          className="w-full font-bold py-3 transition-colors duration-200" style={{ background: "#111", color: "#fff" }}
         >
           {status === 'submitting' ? 'Sending…' : 'Get My Free Estimate →'}
         </button>

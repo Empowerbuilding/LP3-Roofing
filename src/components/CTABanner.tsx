@@ -13,7 +13,7 @@ export default function CTABanner() {
         </p>
         <Link
           href="/contact"
-          className="mt-8 inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold text-lg rounded-none transition-colors duration-200"
+          className="mt-8 inline-block px-8 py-4 font-bold text-lg transition-colors duration-200" style={{ background: "#111", color: "#fff" }}
         >
           Book Your Free Inspection
         </Link>

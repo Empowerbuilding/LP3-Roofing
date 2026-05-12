@@ -30,11 +30,11 @@ export default function ServicesSection() {
               <Link
                 key={s.title}
                 href={s.href}
-                className="group flex items-center justify-between px-8 py-6 rounded-xl text-white font-bold text-2xl tracking-wide uppercase transition-all duration-200 hover:scale-[1.02]"
-                style={{ background: 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)', border: '1px solid #2a2a2a' }}
+                className="group flex items-center justify-between px-8 py-6 font-bold text-2xl tracking-wide uppercase transition-all duration-200 hover:scale-[1.02]"
+                style={{ background: '#111', border: '1px solid #333', color: '#fff' }}
               >
-                <span>{s.title}</span>
-                <span className="text-white group-hover:translate-x-1 transition-transform duration-200 text-3xl">→</span>
+                <span style={{ color: '#fff' }}>{s.title}</span>
+                <span style={{ color: '#fff' }} className="group-hover:translate-x-1 transition-transform duration-200 text-3xl">→</span>
               </Link>
             ))}
           </div>
@@ -57,9 +57,9 @@ export default function ServicesSection() {
             <ul className="space-y-3 mb-10">
               {bullets.map((b) => (
                 <li key={b} className="flex items-center gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-none bg-gray-900 flex items-center justify-center">
-                    <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center" style={{ background: '#111' }}>
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="#fff" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </span>
                   <span className="text-gray-900 font-semibold text-base">{b}</span>
@@ -71,13 +71,15 @@ export default function ServicesSection() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/services"
-                className="px-8 py-3 rounded-none border-2 border-gray-900 bg-gray-900 text-white hover:bg-gray-700 font-bold text-sm uppercase tracking-wide transition-all duration-200"
+                className="px-8 py-3 font-bold text-sm uppercase tracking-wide transition-all duration-200"
+                style={{ background: '#111', color: '#fff', border: '2px solid #111' }}
               >
                 See All Services
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-3 rounded-none bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
+                className="px-8 py-3 font-bold text-sm uppercase tracking-wide transition-all duration-200"
+                style={{ background: '#111', color: '#fff' }}
               >
                 Get a Free Quote
               </Link>

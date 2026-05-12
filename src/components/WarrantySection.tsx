@@ -72,10 +72,10 @@ function WarrantyContent() {
         installation standards required to keep your warranty valid for life.
       </p>
       <div className="flex flex-wrap gap-4">
-        <Link href="/about" className="px-7 py-3 rounded-none border-2 border-gray-900 bg-gray-900 text-white hover:bg-gray-700 font-bold text-sm uppercase tracking-wide transition-all duration-200">
+        <Link href="/about" className="px-7 py-3 font-bold text-sm uppercase tracking-wide transition-all duration-200" style={{ background: "#111", color: "#fff", border: "2px solid #111" }}>
           About LP3 Roofing
         </Link>
-        <Link href="/contact" className="px-7 py-3 rounded-none bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200">
+        <Link href="/contact" className="px-7 py-3 font-bold text-sm uppercase tracking-wide transition-all duration-200" style={{ background: "#111", color: "#fff" }}>
           Get a Free Quote
         </Link>
       </div>
