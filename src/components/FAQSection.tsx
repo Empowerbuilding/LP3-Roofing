@@ -41,7 +41,7 @@ export default function FAQSection() {
     <section ref={sectionRef} className="py-20" style={{ background: "#f0f0f0" }}>
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="font-display text-white text-xs font-bold uppercase tracking-[4px] mb-3" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease' }}>FAQ</p>
+          <p className="font-display text-gray-500 text-xs font-bold uppercase tracking-[4px] mb-3" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease' }}>FAQ</p>
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-gray-950" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease 0.1s' }}>Got Questions? We&apos;ve Got Answers.</h2>
         </div>
 
@@ -58,16 +58,16 @@ export default function FAQSection() {
                 className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
                 onClick={() => setOpen(i)}
               >
-                <span className={`font-bold text-base sm:text-lg ${open === i ? 'text-white' : 'text-gray-950'}`}>
+                <span className={`font-bold text-base sm:text-lg ${open === i ? 'text-gray-950' : 'text-gray-950'}`}>
                   {faq.q}
                 </span>
-                <span className={`text-2xl font-light flex-shrink-0 ${open === i ? 'text-gray-300' : 'text-white'}`}>
+                <span className={`text-2xl font-light flex-shrink-0 ${open === i ? 'text-gray-600' : 'text-gray-600'}`}>
                   {open === i ? '−' : '+'}
                 </span>
               </button>
               {open === i && (
                 <div className="px-6 pb-6">
-                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{faq.a}</p>
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{faq.a}</p>
                 </div>
               )}
             </div>

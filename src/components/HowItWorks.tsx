@@ -41,7 +41,7 @@ export default function HowItWorks() {
     <section ref={ref as React.RefObject<HTMLElement>} className="py-20" style={{ background: "#e8e8e8" }}>
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="font-display reveal text-white text-xs font-bold uppercase tracking-[4px] mb-3">Simple Process</p>
+          <p className="font-display reveal text-gray-500 text-xs font-bold uppercase tracking-[4px] mb-3">Simple Process</p>
           <h2 className="font-display reveal delay-100 text-3xl sm:text-4xl font-extrabold text-gray-950">Get Your Roof Fixed in 3 Easy Steps</h2>
         </div>
 
@@ -52,10 +52,10 @@ export default function HowItWorks() {
               className="reveal px-8 py-8 text-center flex flex-col items-center gap-3 flex-1"
               style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)' }}
             >
-              <div className="text-white">{step.icon}</div>
-              <p className="text-gray-300 text-xs font-bold uppercase tracking-[3px]">{step.number}</p>
-              <h3 className="font-display text-2xl font-extrabold text-white">{step.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-md">{step.description}</p>
+              <div className="text-gray-900">{step.icon}</div>
+              <p className="text-gray-500 text-xs font-bold uppercase tracking-[3px]">{step.number}</p>
+              <h3 className="font-display text-2xl font-extrabold text-gray-950">{step.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed max-w-md">{step.description}</p>
             </div>
           ))}
         </div>
