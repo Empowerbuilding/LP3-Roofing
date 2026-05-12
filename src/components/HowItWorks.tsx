@@ -49,7 +49,7 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="reveal rounded-2xl px-8 py-8 text-center flex flex-col items-center gap-3 flex-1"
+              className="reveal px-8 py-8 text-center flex flex-col items-center gap-3 flex-1"
               style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)' }}
             >
               <div className="text-white">{step.icon}</div>
