@@ -8,7 +8,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 overflow-hidden shadow-xl" className="h-24 md:h-36">
+    <nav className="sticky top-0 z-50 overflow-hidden shadow-xl h-24 md:h-36">
       {/* Split background: black left, white right with diagonal cut */}
       <div className="absolute inset-0 flex">
         <div className="bg-black" style={{ width: '42%', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)' }} />
