@@ -58,11 +58,7 @@ export default function ServiceAreaSection() {
         disableDefaultUI: true,
         zoomControl: true,
         styles: [
-          { featureType: 'all', elementType: 'all', stylers: [{ saturation: -100 }] },
-          { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#888888' }] },
-          { featureType: 'landscape', elementType: 'geometry', stylers: [{ color: '#d4d4d4' }] },
-          { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#ffffff' }] },
-          { featureType: 'poi', elementType: 'geometry', stylers: [{ color: '#c0c0c0' }] },
+          { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#b0b0b0' }] },
         ],
       })
       new window.google.maps.Circle({
