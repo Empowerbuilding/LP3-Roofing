@@ -61,7 +61,7 @@ export default function Home() {
             </div>
 
             {/* Right: Estimate form card */}
-            <div style={{ filter: "drop-shadow(0 0 32px rgba(255,255,255,0.15))" }}>
+            <div style={{ filter: "drop-shadow(0 0 60px rgba(255,255,255,0.35))" }}>
               <HeroForm />
             </div>
           </div>
