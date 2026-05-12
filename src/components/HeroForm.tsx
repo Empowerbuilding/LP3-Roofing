@@ -68,7 +68,7 @@ export default function HeroForm() {
   return (
     <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
       {/* Header bar */}
-      <div className="bg-gray-900 px-6 py-3 text-center">
+      <div className="px-6 py-3 text-center" style={{ background: "#111" }}>
         <h2 className="font-display text-4xl font-bold text-white">Get a Free Estimate Today!</h2>
       </div>
 
