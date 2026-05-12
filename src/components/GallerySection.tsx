@@ -3,7 +3,6 @@ import { useReveal } from '@/hooks/useReveal'
 import Link from 'next/link'
 import Image from 'next/image'
 
-// Placeholder slots — replace src with real photos when provided
 const photos = [
   { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/gallery-1.webp', alt: 'LP3 Roofing Project 1' },
   { src: 'https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/gallery-2.webp', alt: 'LP3 Roofing Project 2' },
@@ -28,18 +27,25 @@ export default function GallerySection() {
           </Link>
         </div>
 
-        {/* Photo grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {/* Top row: large left (spans 2) + tall right */}
-          <div className="col-span-2 sm:col-span-2 relative h-64 sm:h-80 rounded-2xl overflow-hidden">
+        {/* Mobile: horizontal scroll carousel */}
+        <div className="sm:hidden flex gap-3 overflow-x-auto pb-3 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
+          {photos.map((photo, i) => (
+            <div key={i} className="relative flex-shrink-0 w-72 h-56 rounded-2xl overflow-hidden snap-start">
+              <Image src={photo.src} alt={photo.alt} fill className="object-cover" />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: original grid */}
+        <div className="hidden sm:grid grid-cols-3 gap-3">
+          <div className="col-span-2 relative h-80 rounded-2xl overflow-hidden">
             <Image src={photos[0].src} alt={photos[0].alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
           </div>
-          <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden">
+          <div className="relative h-80 rounded-2xl overflow-hidden">
             <Image src={photos[1].src} alt={photos[1].alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
           </div>
-          {/* Bottom row: 3 equal columns */}
           {photos.slice(2, 5).map((photo, i) => (
-            <div key={i} className="relative h-52 sm:h-60 rounded-2xl overflow-hidden">
+            <div key={i} className="relative h-60 rounded-2xl overflow-hidden">
               <Image src={photo.src} alt={photo.alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
             </div>
           ))}
