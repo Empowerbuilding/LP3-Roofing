@@ -19,7 +19,7 @@ export default function PartnerLogos() {
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className="py-8 border-y border-gray-300" style={{ background: "#e8e8e8" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="reveal text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">Our Trusted Partners</p>
+        <p className="reveal text-center text-xs font-semibold text-gray-950 uppercase tracking-widest mb-8">Our Trusted Partners</p>
         {/* Desktop: single row | Mobile: staggered 4-4 */}
         <div className="hidden md:grid md:grid-cols-8 items-center gap-6">
           {logos.map((logo) => (
