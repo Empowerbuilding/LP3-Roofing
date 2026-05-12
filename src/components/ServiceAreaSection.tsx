@@ -54,7 +54,7 @@ export default function ServiceAreaSection() {
       mapInitRef.current = true
       const map = new window.google.maps.Map(mapContainerRef.current, {
         center: { lat: 32.8, lng: -97.35 },
-        zoom: 10,
+        zoom: 9,
         disableDefaultUI: true,
         zoomControl: true,
         styles: [
