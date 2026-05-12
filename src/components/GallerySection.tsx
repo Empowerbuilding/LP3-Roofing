@@ -28,7 +28,7 @@ export default function GallerySection() {
         </div>
 
         {/* Mobile: horizontal scroll carousel */}
-        <div className="sm:hidden flex gap-3 overflow-x-auto pb-3 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
+        <div className="sm:hidden flex gap-3 overflow-x-auto pb-3 snap-x snap-mandatory scrollbar-hide -mx-4 px-6">
           {photos.map((photo, i) => (
             <div key={i} className="relative flex-shrink-0 w-72 h-56 rounded-2xl overflow-hidden snap-start">
               <Image src={photo.src} alt={photo.alt} fill className="object-cover" />
