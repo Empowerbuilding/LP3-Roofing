@@ -15,10 +15,10 @@ export default function Footer() {
               height={80}
               className="h-24 w-auto object-contain mb-4"
             />
-            <p className="text-sm text-gray-400 max-w-sm">
+            <p className="text-sm text-gray-400 max-w-sm leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
               Fort Worth&apos;s most trusted roofing contractor. Licensed, insured, and committed to quality craftsmanship on every job.
             </p>
-            <p className="mt-4 text-white font-semibold text-lg">
+            <p className="mt-4 font-display text-white font-semibold text-lg tracking-widest">
               817-555-0100
             </p>
             <p className="text-sm text-gray-400 mt-1">Fort Worth, TX</p>
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-display text-white font-semibold mb-4">Services</h3>
+            <h3 className="font-display text-white font-bold mb-4 tracking-[3px] uppercase text-sm">Services</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/services/storm-damage" className="hover:text-white transition-colors duration-200">Storm Damage</Link></li>
               <li><Link href="/services/roof-replacement" className="hover:text-white transition-colors duration-200">Roof Replacement</Link></li>
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-display text-white font-semibold mb-4">Company</h3>
+            <h3 className="font-display text-white font-bold mb-4 tracking-[3px] uppercase text-sm">Company</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white transition-colors duration-200">About Us</Link></li>
               <li><Link href="/gallery" className="hover:text-white transition-colors duration-200">Gallery</Link></li>
@@ -49,10 +49,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>
             &copy; {new Date().getFullYear()} LP3 Roofing &amp; Construction. All rights reserved.
           </p>
-          <p className="text-sm text-gray-500">Fort Worth, TX 76101</p>
+          <p className="text-sm text-gray-500" style={{ fontFamily: "Inter, sans-serif" }}>Fort Worth, TX 76101</p>
         </div>
       </div>
     </footer>
