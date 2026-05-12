@@ -37,3 +37,13 @@ input:focus, select:focus, textarea:focus { outline: none; }
 
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Force white text on all dark buttons — belt and suspenders */
+a[class*="bg-gray-900"],
+a[class*="bg-gray-800"],
+a[class*="bg-black"],
+button[class*="bg-gray-900"],
+button[class*="bg-gray-800"],
+button[class*="bg-black"] {
+  color: #ffffff !important;
+}
