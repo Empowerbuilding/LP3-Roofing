@@ -42,7 +42,7 @@ export default function HowItWorks() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-display reveal text-white text-xs font-bold uppercase tracking-[4px] mb-3">Simple Process</p>
-          <h2 className="font-display reveal delay-100 text-3xl sm:text-4xl font-extrabold text-gray-950">Get Your Roof Fixed in 3 Easy Steps</h2>
+          <h2 className="font-display reveal delay-100 text-3xl sm:text-4xl font-extrabold text-white">Get Your Roof Fixed in 3 Easy Steps</h2>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4">
