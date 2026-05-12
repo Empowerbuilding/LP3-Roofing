@@ -8,7 +8,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 overflow-hidden shadow-xl" style={{ height: '80px' }}>
+    <nav className="sticky top-0 z-50 overflow-hidden shadow-xl" className="h-24 md:h-36">
       {/* Split background: black left, white right with diagonal cut */}
       <div className="absolute inset-0 flex">
         <div className="bg-black" style={{ width: '42%', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)' }} />
@@ -23,8 +23,8 @@ export default function Navbar() {
             src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/logo-v2.jpg"
             alt="LP3 Roofing & Construction"
             width={140}
-            height={56}
-            className="h-14 w-auto object-contain"
+            height={96}
+            className="h-16 md:h-24 w-auto object-contain"
             style={{ mixBlendMode: 'lighten' }}
           />
         </Link>
