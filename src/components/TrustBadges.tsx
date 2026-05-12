@@ -39,14 +39,14 @@ const badges = [
 
 export default function TrustBadges() {
   return (
-    <section className="py-12 border-b border-gray-900" style={{ background: "#0a0a0a" }}>
+    <section className="bg-white py-12 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {badges.map((badge) => (
             <div key={badge.label} className="flex flex-col items-center text-center gap-2 py-4">
               {badge.icon}
-              <span className="font-bold text-white text-base">{badge.label}</span>
-              <span className="text-sm text-gray-400">{badge.sub}</span>
+              <span className="font-bold text-gray-950 text-base">{badge.label}</span>
+              <span className="text-sm text-gray-500">{badge.sub}</span>
             </div>
           ))}
         </div>

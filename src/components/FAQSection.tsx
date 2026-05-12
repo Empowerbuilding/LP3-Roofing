@@ -41,8 +41,8 @@ export default function FAQSection() {
     <section ref={sectionRef} className="bg-white py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="font-display text-white text-xs font-bold uppercase tracking-[4px] mb-3" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease' }}>FAQ</p>
-          className="font-display text-3xl sm:text-4xl font-extrabold text-gray-950" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease 0.1s' }}>Got Questions? We&apos;ve Got Answers.</h2>
+          <p className="text-white text-xs font-bold uppercase tracking-[4px] mb-3" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease' }}>FAQ</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease 0.1s' }}>Got Questions? We&apos;ve Got Answers.</h2>
         </div>
 
         <div className="flex flex-col gap-4">

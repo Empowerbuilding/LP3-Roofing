@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            className="font-display text-white font-semibold mb-4">Services</h3>
+            <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/services/storm-damage" className="hover:text-white transition-colors duration-200">Storm Damage</Link></li>
               <li><Link href="/services/roof-replacement" className="hover:text-white transition-colors duration-200">Roof Replacement</Link></li>
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            className="font-display text-white font-semibold mb-4">Company</h3>
+            <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white transition-colors duration-200">About Us</Link></li>
               <li><Link href="/gallery" className="hover:text-white transition-colors duration-200">Gallery</Link></li>

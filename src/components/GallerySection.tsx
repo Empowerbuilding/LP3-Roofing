@@ -20,8 +20,8 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="font-display reveal text-gray-900 text-xs font-bold uppercase tracking-[4px] mb-3">Recent Roofing Projects</p>
-          className="font-display text-3xl sm:text-4xl font-extrabold text-gray-950 mb-3">Our Work Speaks For Itself</h2>
+          <p className="reveal text-gray-900 text-xs font-bold uppercase tracking-[4px] mb-3">Recent Roofing Projects</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950 mb-3">Our Work Speaks For Itself</h2>
           <Link href="/gallery" className="text-gray-500 hover:text-white text-sm underline underline-offset-4 transition-colors duration-200">
             View Our Gallery →
           </Link>

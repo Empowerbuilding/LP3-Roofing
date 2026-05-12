@@ -34,7 +34,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Headline + subtext + phone */}
             <div className="text-center lg:text-left">
-              className="font-display text-4xl sm:text-4xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+              <h1 className="text-4xl sm:text-4xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
                 Fort Worth&apos;s{" "}
                 <span className="text-white">#1 Rated</span>
                 <br />
