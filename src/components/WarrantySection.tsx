@@ -75,7 +75,7 @@ function WarrantyContent() {
         <Link href="/about" className="px-7 py-3 rounded-full border-2 border-gray-700 text-gray-300 hover:bg-gray-900 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200">
           About LP3 Roofing
         </Link>
-        <Link href="/contact" className="px-7 py-3 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.35)]">
+        <Link href="/contact" className="px-7 py-3 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200">
           Get a Free Quote
         </Link>
       </div>
