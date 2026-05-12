@@ -33,7 +33,7 @@ export default function GalleryPage() {
       <section className="bg-gray-950 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
-            Our <span className="text-orange-500">Work</span>
+            Our <span className="text-white">Work</span>
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
             Browse our portfolio of completed roofing projects across the Fort Worth and DFW area.
@@ -52,7 +52,7 @@ export default function GalleryPage() {
                 onClick={() => setActive(f)}
                 className={`px-5 py-2 rounded-md text-sm font-semibold transition-colors duration-200 ${
                   active === f
-                    ? 'bg-orange-500 text-white'
+                    ? 'bg-gray-900 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -72,7 +72,7 @@ export default function GalleryPage() {
                   loading="lazy"
                 />
                 <div className="p-4">
-                  <span className="text-xs font-semibold text-orange-500 uppercase tracking-wider">{p.category}</span>
+                  <span className="text-xs font-semibold text-white uppercase tracking-wider">{p.category}</span>
                   <p className="mt-1 font-semibold text-gray-950">{p.label}</p>
                 </div>
               </div>

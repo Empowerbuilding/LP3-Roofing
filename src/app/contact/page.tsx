@@ -53,7 +53,7 @@ export default function ContactPage() {
       <section className="bg-gray-950 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
-            Contact <span className="text-orange-500">Us</span>
+            Contact <span className="text-white">Us</span>
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-xl mx-auto">
             Request your free inspection or ask us anything. We typically respond within 2 business hours.
@@ -89,7 +89,7 @@ export default function ContactPage() {
                         required
                         value={form.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-200"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200"
                         placeholder="John Smith"
                       />
                     </div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                         required
                         value={form.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-200"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200"
                         placeholder="(817) 555-0000"
                       />
                     </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                       required
                       value={form.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                       name="service"
                       value={form.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-200 bg-white"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200 bg-white"
                     >
                       <option value="">Select a service...</option>
                       {serviceOptions.map((s) => (
@@ -143,7 +143,7 @@ export default function ContactPage() {
                       rows={5}
                       value={form.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors duration-200 resize-none"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors duration-200 resize-none"
                       placeholder="Tell us about your roofing needs..."
                     />
                   </div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full py-4 bg-orange-500 hover:bg-orange-600 disabled:opacity-60 text-white font-bold text-lg rounded-md transition-colors duration-200"
+                    className="w-full py-4 bg-gray-900 hover:bg-gray-800 disabled:opacity-60 text-white font-bold text-lg rounded-md transition-colors duration-200"
                   >
                     {status === 'submitting' ? 'Sending...' : 'Send Message'}
                   </button>
@@ -168,22 +168,22 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-gray-950">Get in Touch</h2>
 
               <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="mt-1 flex-shrink-0 w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-950">Phone</p>
-                  <a href="tel:8175550100" className="text-orange-500 font-bold text-xl hover:text-orange-600 transition-colors duration-200">
+                  <a href="tel:8175550100" className="text-white font-bold text-xl hover:text-white transition-colors duration-200">
                     817-555-0100
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="mt-1 flex-shrink-0 w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -196,8 +196,8 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="mt-1 flex-shrink-0 w-10 h-10 bg-gray-50 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -211,14 +211,14 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-orange-50 border border-orange-100 rounded-xl p-6">
+              <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
                 <h3 className="font-bold text-gray-950 mb-2">Emergency Roof Damage?</h3>
                 <p className="text-gray-600 text-sm mb-4">
                   Storms don&apos;t keep business hours. Call us 24/7 for emergency tarping and damage assessment.
                 </p>
                 <a
                   href="tel:8175550100"
-                  className="inline-block px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-md transition-colors duration-200"
+                  className="inline-block px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white font-bold rounded-md transition-colors duration-200"
                 >
                   Call Now: 817-555-0100
                 </a>

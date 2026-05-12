@@ -14,7 +14,7 @@ export default function GuttersPage() {
       <section className="bg-gray-950 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
-            Gutter <span className="text-orange-500">Installation</span>
+            Gutter <span className="text-white">Installation</span>
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
             Seamless gutters custom-fabricated on-site. Protect your home&apos;s foundation, siding, and landscaping from water damage.
@@ -61,7 +61,7 @@ export default function GuttersPage() {
                   "Free estimate and drainage assessment",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span className="text-gray-600">{item}</span>

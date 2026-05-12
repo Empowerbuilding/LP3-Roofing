@@ -18,7 +18,7 @@ export default function Footer() {
             <p className="text-sm text-gray-400 max-w-sm">
               Fort Worth&apos;s most trusted roofing contractor. Licensed, insured, and committed to quality craftsmanship on every job.
             </p>
-            <p className="mt-4 text-orange-500 font-semibold text-lg">
+            <p className="mt-4 text-white font-semibold text-lg">
               817-555-0100
             </p>
             <p className="text-sm text-gray-400 mt-1">Fort Worth, TX</p>

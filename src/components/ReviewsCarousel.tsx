@@ -59,13 +59,13 @@ export default function ReviewsCarousel() {
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className="bg-white py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="reveal text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">5-Star Reviews</p>
+        <p className="reveal text-white text-xs font-bold uppercase tracking-[4px] mb-3">5-Star Reviews</p>
         <h2 className="reveal delay-100 text-3xl sm:text-4xl font-extrabold text-gray-950 mb-2">Real Customer Reviews</h2>
         <a
           href="https://www.google.com/maps/search/LP3+Roofing+Fort+Worth"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-gray-500 underline hover:text-orange-500 transition-colors"
+          className="text-sm text-gray-500 underline hover:text-white transition-colors"
         >
           See All Reviews
         </a>
@@ -100,7 +100,7 @@ export default function ReviewsCarousel() {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${i === current ? 'bg-orange-500 scale-110' : 'bg-gray-300 hover:bg-gray-400'}`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${i === current ? 'bg-gray-900 scale-110' : 'bg-gray-300 hover:bg-gray-400'}`}
             />
           ))}
         </div>

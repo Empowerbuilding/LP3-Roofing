@@ -20,9 +20,9 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="reveal text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">Recent Roofing Projects</p>
+          <p className="reveal text-white text-xs font-bold uppercase tracking-[4px] mb-3">Recent Roofing Projects</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-950 mb-3">Our Work Speaks For Itself</h2>
-          <Link href="/gallery" className="text-gray-500 hover:text-orange-500 text-sm underline underline-offset-4 transition-colors duration-200">
+          <Link href="/gallery" className="text-gray-500 hover:text-white text-sm underline underline-offset-4 transition-colors duration-200">
             View Our Gallery →
           </Link>
         </div>
@@ -55,7 +55,7 @@ export default function GallerySection() {
         <div className="text-center mt-10">
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-gray-700 text-white hover:bg-gray-900 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
           >
             View Full Gallery
           </Link>

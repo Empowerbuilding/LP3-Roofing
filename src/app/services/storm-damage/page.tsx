@@ -14,7 +14,7 @@ export default function StormDamagePage() {
       <section className="bg-gray-950 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
-            Storm Damage <span className="text-orange-500">Roofing</span>
+            Storm Damage <span className="text-white">Roofing</span>
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
             Hail, wind, and tornado specialists. We handle your entire insurance claim process from inspection to final approval.
@@ -60,7 +60,7 @@ export default function StormDamagePage() {
                   "Clean-up and removal of all old materials",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span className="text-gray-600">{item}</span>

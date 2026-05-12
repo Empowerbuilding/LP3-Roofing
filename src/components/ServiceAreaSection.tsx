@@ -83,7 +83,7 @@ export default function ServiceAreaSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-12">
-          <p className="text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">Service Area</p>
+          <p className="text-white text-xs font-bold uppercase tracking-[4px] mb-3">Service Area</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Proudly Serving North Fort Worth & DFW</h2>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto text-sm">
             From Keller to Saginaw, Haslet to Azle — if you&apos;re in the DFW area, LP3 is your local roofer.
@@ -95,7 +95,7 @@ export default function ServiceAreaSection() {
           <div ref={mapContainerRef} className="w-full h-full rounded-2xl overflow-hidden" style={{ display: mapLoaded ? 'block' : 'none' }} />
           {!mapLoaded && (
             <div className="w-full h-full rounded-2xl overflow-hidden flex items-center justify-center bg-gray-900">
-              <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
+              <div className="w-10 h-10 border-4 border-gray-700 border-t-transparent rounded-full animate-spin" />
             </div>
           )}
         </div>
@@ -135,7 +135,7 @@ export default function ServiceAreaSection() {
         <div className="flex flex-wrap gap-3 mt-8 justify-center">
           {['Fort Worth', 'Keller', 'Saginaw', 'Haslet', 'Azle', 'North Richland Hills', 'Watauga', 'Haltom City'].map((city) => (
             <span key={city} className="flex items-center gap-2 text-gray-300 text-sm bg-gray-900 px-4 py-2 rounded-full border border-gray-800">
-              <span className="w-2 h-2 rounded-full bg-orange-500 inline-block" />
+              <span className="w-2 h-2 rounded-full bg-gray-900 inline-block" />
               {city}
             </span>
           ))}

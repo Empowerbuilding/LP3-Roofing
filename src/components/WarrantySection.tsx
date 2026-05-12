@@ -59,7 +59,7 @@ export default function WarrantySection() {
 function WarrantyContent() {
   return (
     <div className="max-w-lg">
-      <p className="reveal from-left text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-4">
+      <p className="reveal from-left text-white text-xs font-bold uppercase tracking-[4px] mb-4">
         Fort Worth&apos;s Trusted Roofing Experts
       </p>
       <h2 className="reveal from-left delay-100 text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
@@ -72,10 +72,10 @@ function WarrantyContent() {
         installation standards required to keep your warranty valid for life.
       </p>
       <div className="flex flex-wrap gap-4">
-        <Link href="/about" className="px-7 py-3 rounded-full border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200">
+        <Link href="/about" className="px-7 py-3 rounded-full border-2 border-gray-700 text-gray-300 hover:bg-gray-900 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200">
           About LP3 Roofing
         </Link>
-        <Link href="/contact" className="px-7 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.35)]">
+        <Link href="/contact" className="px-7 py-3 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.35)]">
           Get a Free Quote
         </Link>
       </div>

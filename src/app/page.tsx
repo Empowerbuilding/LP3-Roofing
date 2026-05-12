@@ -36,7 +36,7 @@ export default function Home() {
             <div className="text-center lg:text-left">
               <h1 className="text-4xl sm:text-4xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
                 Fort Worth&apos;s{" "}
-                <span className="text-orange-500">#1 Rated</span>
+                <span className="text-white">#1 Rated</span>
                 <br />
                 Roofing Contractor
               </h1>
@@ -46,9 +46,9 @@ export default function Home() {
               </p>
               <a
                 href="tel:8175550100"
-                className="mt-4 lg:mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 lg:bg-transparent lg:hover:bg-transparent text-white lg:hover:text-orange-400 font-bold rounded-full px-4 py-1.5 lg:px-0 lg:py-0 lg:rounded-none transition-colors duration-200 mx-auto lg:mx-0 text-sm lg:text-base"
+                className="mt-4 lg:mt-8 inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 lg:bg-transparent lg:hover:bg-transparent text-white lg:hover:text-gray-300 font-bold rounded-full px-4 py-1.5 lg:px-0 lg:py-0 lg:rounded-none transition-colors duration-200 mx-auto lg:mx-0 text-sm lg:text-base"
               >
-                <div className="flex items-center justify-center w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white/20 lg:bg-orange-500 flex-shrink-0">
+                <div className="flex items-center justify-center w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-white/20 lg:bg-gray-900 flex-shrink-0">
                   <svg className="w-4 h-4 lg:w-5 lg:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>

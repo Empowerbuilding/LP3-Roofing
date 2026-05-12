@@ -12,7 +12,7 @@ const values = [
     title: "Integrity First",
     desc: "We give honest assessments, fair prices, and recommendations that serve your best interest — not ours.",
     icon: (
-      <svg className="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
@@ -21,7 +21,7 @@ const values = [
     title: "Craftsmanship",
     desc: "We take pride in every job, using premium materials and following manufacturer installation standards on every project.",
     icon: (
-      <svg className="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
       </svg>
     ),
@@ -30,7 +30,7 @@ const values = [
     title: "Community",
     desc: "We&apos;re Fort Worth locals. We live, work, and raise our families here — and we treat every home like it&apos;s our neighbor&apos;s.",
     icon: (
-      <svg className="w-8 h-8 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
@@ -62,7 +62,7 @@ export default function AboutPage() {
       <section className="bg-gray-950 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
-            About <span className="text-orange-500">LP3 Roofing</span>
+            About <span className="text-white">LP3 Roofing</span>
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
             Fort Worth&apos;s trusted roofing company. Family-owned, locally operated, and committed to doing the right thing every time.
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-950">{member.name}</h3>
-                <p className="text-orange-500 font-medium text-sm mt-1">{member.title}</p>
+                <p className="text-white font-medium text-sm mt-1">{member.title}</p>
                 <p className="mt-3 text-gray-500 text-sm leading-relaxed">{member.bio}</p>
               </div>
             ))}

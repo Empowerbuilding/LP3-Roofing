@@ -14,7 +14,7 @@ export default function RoofRepairPage() {
       <section className="bg-gray-950 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
-            Roof <span className="text-orange-500">Repair</span>
+            Roof <span className="text-white">Repair</span>
           </h1>
           <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
             Targeted, cost-effective repairs for leaks, damaged shingles, and flashing issues. Fast response, lasting results.
@@ -61,7 +61,7 @@ export default function RoofRepairPage() {
                   "Emergency tarping and temporary weatherproofing",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span className="text-gray-600">{item}</span>

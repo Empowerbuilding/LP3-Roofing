@@ -34,17 +34,17 @@ export default function ServicesSection() {
                 style={{ background: 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)', border: '1px solid #2a2a2a' }}
               >
                 <span>{s.title}</span>
-                <span className="text-orange-500 group-hover:translate-x-1 transition-transform duration-200 text-3xl">→</span>
+                <span className="text-white group-hover:translate-x-1 transition-transform duration-200 text-3xl">→</span>
               </Link>
             ))}
           </div>
 
           {/* Right — content */}
           <div>
-            <p className="reveal from-left text-orange-500 text-sm font-bold uppercase tracking-[4px] mb-3">Fort Worth, TX · DFW Metro</p>
+            <p className="reveal from-left text-white text-sm font-bold uppercase tracking-[4px] mb-3">Fort Worth, TX · DFW Metro</p>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-950 leading-tight mb-6">
               Roofing With<br />
-              <span className="text-orange-500">Confidence</span>
+              <span className="text-white">Confidence</span>
             </h2>
             <p className="text-gray-500 text-base leading-relaxed mb-8">
               LP3 Roofing & Construction has been protecting Fort Worth homes and businesses for over 20 years.
@@ -57,7 +57,7 @@ export default function ServicesSection() {
             <ul className="space-y-3 mb-10">
               {bullets.map((b) => (
                 <li key={b} className="flex items-center gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center">
                     <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
@@ -71,13 +71,13 @@ export default function ServicesSection() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/services/storm-damage"
-                className="px-8 py-3 rounded-full border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
+                className="px-8 py-3 rounded-full border-2 border-gray-700 text-white hover:bg-gray-900 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
               >
                 See All Services
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.35)]"
+                className="px-8 py-3 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.35)]"
               >
                 Get a Free Quote
               </Link>

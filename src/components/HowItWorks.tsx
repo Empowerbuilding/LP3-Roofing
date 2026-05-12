@@ -41,7 +41,7 @@ export default function HowItWorks() {
     <section ref={ref as React.RefObject<HTMLElement>} className="bg-gray-50 py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="reveal text-orange-500 text-xs font-bold uppercase tracking-[4px] mb-3">Simple Process</p>
+          <p className="reveal text-white text-xs font-bold uppercase tracking-[4px] mb-3">Simple Process</p>
           <h2 className="reveal delay-100 text-3xl sm:text-4xl font-extrabold text-gray-950">Get Your Roof Fixed in 3 Easy Steps</h2>
         </div>
 
@@ -52,8 +52,8 @@ export default function HowItWorks() {
               className="reveal rounded-2xl px-8 py-8 text-center flex flex-col items-center gap-3 flex-1"
               style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)' }}
             >
-              <div className="text-orange-500">{step.icon}</div>
-              <p className="text-orange-400 text-xs font-bold uppercase tracking-[3px]">{step.number}</p>
+              <div className="text-white">{step.icon}</div>
+              <p className="text-gray-300 text-xs font-bold uppercase tracking-[3px]">{step.number}</p>
               <h3 className="text-2xl font-extrabold text-white">{step.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed max-w-md">{step.description}</p>
             </div>
@@ -63,7 +63,7 @@ export default function HowItWorks() {
         <div className="text-center mt-10">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full text-base uppercase tracking-wide transition-all duration-200 shadow-[0_0_20px_rgba(249,115,22,0.4)]"
+            className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white font-bold px-8 py-4 rounded-full text-base uppercase tracking-wide transition-all duration-200 shadow-[0_0_20px_rgba(249,115,22,0.4)]"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
