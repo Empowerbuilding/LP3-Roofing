@@ -34,13 +34,13 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Headline + subtext + phone */}
             <div className="text-center lg:text-left">
-              <h1 className="text-2xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
                 Fort Worth&apos;s{" "}
                 <span className="text-orange-500">#1 Rated</span>
                 <br />
                 Roofing Contractor
               </h1>
-              <p className="mt-2 lg:mt-6 text-xs sm:text-xl text-gray-200 leading-snug max-w-lg">
+              <p className="mt-2 lg:mt-6 text-sm sm:text-xl text-gray-200 leading-snug max-w-lg">
                 Licensed &amp; insured. Storm damage specialists. 20+ years serving the DFW area.
                 We handle your insurance claim from start to finish — at no extra cost to you.
               </p>
