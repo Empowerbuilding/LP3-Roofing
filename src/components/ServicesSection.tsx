@@ -3,11 +3,11 @@ import { useReveal } from '@/hooks/useReveal'
 import Link from 'next/link'
 
 const services = [
-  { title: 'Storm Damage', href: '/services/storm-damage' },
-  { title: 'Roof Replacement', href: '/services/roof-replacement' },
-  { title: 'Roof Repair', href: '/services/roof-repair' },
-  { title: 'Commercial Roofing', href: '/services/commercial' },
-  { title: 'Gutters', href: '/services/gutters' },
+  { title: 'Storm Damage', href: '/services' },
+  { title: 'Roof Replacement', href: '/services' },
+  { title: 'Roof Repair', href: '/services' },
+  { title: 'Commercial Roofing', href: '/services' },
+  { title: 'Gutters', href: '/services' },
 ]
 
 const bullets = [
@@ -28,9 +28,9 @@ export default function ServicesSection() {
           <div className="flex flex-col gap-4">
             {services.map((s) => (
               <Link
-                key={s.href}
+                key={s.title}
                 href={s.href}
-                className="group flex items-center justify-between px-8 py-6 rounded-xl text-white font-bold text-2xl tracking-wide uppercase transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(249,115,22,0.3)]"
+                className="group flex items-center justify-between px-8 py-6 rounded-xl text-white font-bold text-2xl tracking-wide uppercase transition-all duration-200 hover:scale-[1.02]"
                 style={{ background: 'linear-gradient(135deg, #111 0%, #1a1a1a 100%)', border: '1px solid #2a2a2a' }}
               >
                 <span>{s.title}</span>
@@ -41,10 +41,10 @@ export default function ServicesSection() {
 
           {/* Right — content */}
           <div>
-            <p className="reveal from-left text-white text-sm font-bold uppercase tracking-[4px] mb-3">Fort Worth, TX · DFW Metro</p>
+            <p className="reveal from-left text-gray-500 text-sm font-bold uppercase tracking-[4px] mb-3">Fort Worth, TX · DFW Metro</p>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-950 leading-tight mb-6">
               Roofing With<br />
-              <span className="text-white">Confidence</span>
+              <span className="text-gray-950">Confidence</span>
             </h2>
             <p className="text-gray-500 text-base leading-relaxed mb-8">
               LP3 Roofing & Construction has been protecting Fort Worth homes and businesses for over 20 years.
@@ -70,14 +70,14 @@ export default function ServicesSection() {
             {/* Buttons */}
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/services/storm-damage"
-                className="px-8 py-3 rounded-full border-2 border-gray-700 text-white hover:bg-gray-900 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
+                href="/services"
+                className="px-8 py-3 rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
               >
                 See All Services
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-3 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200 shadow-[0_0_15px_rgba(249,115,22,0.35)]"
+                className="px-8 py-3 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
               >
                 Get a Free Quote
               </Link>
