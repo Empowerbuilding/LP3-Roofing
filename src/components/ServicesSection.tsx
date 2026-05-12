@@ -57,7 +57,7 @@ export default function ServicesSection() {
             <ul className="space-y-3 mb-10">
               {bullets.map((b) => (
                 <li key={b} className="flex items-center gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-900 flex items-center justify-center">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-none bg-gray-900 flex items-center justify-center">
                     <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
@@ -71,13 +71,13 @@ export default function ServicesSection() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/services"
-                className="px-8 py-3 rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
+                className="px-8 py-3 rounded-none border-2 border-gray-900 bg-gray-900 text-white hover:bg-gray-700 font-bold text-sm uppercase tracking-wide transition-all duration-200"
               >
                 See All Services
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-3 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
+                className="px-8 py-3 rounded-none bg-gray-900 hover:bg-gray-800 text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
               >
                 Get a Free Quote
               </Link>

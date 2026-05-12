@@ -52,7 +52,7 @@ export default function HeroForm() {
   if (status === 'success') {
     return (
       <div className="bg-white rounded-2xl shadow-2xl p-8 text-center">
-        <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-14 h-14 bg-green-100 rounded-none flex items-center justify-center mx-auto mb-4">
           <svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
@@ -63,7 +63,7 @@ export default function HeroForm() {
     )
   }
 
-  const inputClass = "w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-950 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition text-sm"
+  const inputClass = "w-full border border-gray-300 rounded-none px-4 py-2.5 text-gray-950 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition text-sm"
 
   return (
     <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
@@ -131,7 +131,7 @@ export default function HeroForm() {
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="w-full bg-gray-900 hover:bg-gray-800 disabled:bg-gray-400 text-white font-bold py-3 rounded-lg transition-colors duration-200"
+          className="w-full bg-gray-900 hover:bg-gray-800 disabled:bg-gray-400 text-white font-bold py-3 rounded-none transition-colors duration-200"
         >
           {status === 'submitting' ? 'Sending…' : 'Get My Free Estimate →'}
         </button>

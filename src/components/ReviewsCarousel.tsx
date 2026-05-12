@@ -100,7 +100,7 @@ export default function ReviewsCarousel() {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${i === current ? 'bg-gray-900 scale-110' : 'bg-gray-300 hover:bg-gray-400'}`}
+              className={`w-3 h-3 rounded-none transition-all duration-300 ${i === current ? 'bg-gray-900 scale-110' : 'bg-gray-300 hover:bg-gray-400'}`}
             />
           ))}
         </div>

@@ -55,7 +55,7 @@ export default function GallerySection() {
         <div className="text-center mt-10">
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-bold text-sm uppercase tracking-wide transition-all duration-200"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-none border-2 border-gray-900 bg-gray-900 text-white hover:bg-gray-700 font-bold text-sm uppercase tracking-wide transition-all duration-200"
           >
             View Full Gallery
           </Link>
