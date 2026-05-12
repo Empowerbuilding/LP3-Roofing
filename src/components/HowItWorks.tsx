@@ -38,7 +38,7 @@ const steps = [
 export default function HowItWorks() {
   const ref = useReveal()
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} className="bg-gray-50 py-20">
+    <section ref={ref as React.RefObject<HTMLElement>} className="py-20" style={{ background: "#e8e8e8" }}>
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-display reveal text-white text-xs font-bold uppercase tracking-[4px] mb-3">Simple Process</p>

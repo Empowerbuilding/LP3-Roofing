@@ -17,7 +17,7 @@ const logos = [
 export default function PartnerLogos() {
   const ref = useReveal()
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} className="bg-gray-50 py-8 border-y border-gray-100">
+    <section ref={ref as React.RefObject<HTMLElement>} className="py-8 border-y border-gray-300" style={{ background: "#e8e8e8" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="reveal text-center text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">Our Trusted Partners</p>
         {/* Desktop: single row | Mobile: staggered 4-4 */}

@@ -57,7 +57,7 @@ export default function ReviewsCarousel() {
   const review = reviews[current]
 
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} className="bg-white py-20">
+    <section ref={ref as React.RefObject<HTMLElement>} className="py-20" style={{ background: "#f0f0f0" }}>
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="font-display reveal text-gray-900 text-xs font-bold uppercase tracking-[4px] mb-3">5-Star Reviews</p>
         <h2 className="font-display reveal delay-100 text-3xl sm:text-4xl font-extrabold text-gray-950 mb-2">Real Customer Reviews</h2>

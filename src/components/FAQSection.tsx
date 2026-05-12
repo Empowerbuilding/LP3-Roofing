@@ -38,7 +38,7 @@ export default function FAQSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-white py-20">
+    <section ref={sectionRef} className="py-20" style={{ background: "#f0f0f0" }}>
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-display text-white text-xs font-bold uppercase tracking-[4px] mb-3" style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(20px)', transition: 'all 0.6s ease' }}>FAQ</p>

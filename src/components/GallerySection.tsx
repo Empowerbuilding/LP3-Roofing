@@ -16,7 +16,7 @@ const photos = [
 export default function GallerySection() {
   const ref = useReveal()
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} className="bg-white py-20">
+    <section ref={ref as React.RefObject<HTMLElement>} className="py-20" style={{ background: "#f0f0f0" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">

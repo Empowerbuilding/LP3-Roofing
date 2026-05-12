@@ -20,7 +20,7 @@ const bullets = [
 export default function ServicesSection() {
   const ref = useReveal()
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} className="bg-white py-12">
+    <section ref={ref as React.RefObject<HTMLElement>} className="py-12" style={{ background: "#f0f0f0" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
