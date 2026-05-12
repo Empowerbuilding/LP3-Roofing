@@ -6,7 +6,7 @@ import React from 'react'
 const faqs = [
   {
     q: 'What Type Of Roofing Warranties Come With My Roof?',
-    a: 'LP3 Roofing installs Atlas and GAF certified roofing systems backed by industry-leading warranties. Depending on your selected system, you can receive up to a lifetime material warranty and a 10-year workmanship warranty. We handle all warranty registration on your behalf so you\'re fully protected from day one.',
+    a: 'LP3 Roofing backs every installation with a 6-year workmanship warranty. As certified installers through leading manufacturers, you also get access to extended manufacturer warranties on materials. We handle all warranty registration on your behalf so you\'re fully protected from day one.',
   },
   {
     q: 'Do You Help With Insurance Claims?',
@@ -51,23 +51,23 @@ export default function FAQSection() {
               key={i}
               style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(24px)', transition: `all 0.5s ease ${i * 0.1}s` }}
               className={`border-2 overflow-hidden transition-colors duration-300 ${
-                open === i ? 'bg-black border-black' : 'bg-white border-gray-200 hover:border-gray-400'
+                open === i ? 'bg-black border-black' : 'border-gray-300 hover:border-gray-500'
               }`}
             >
               <button
                 className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
                 onClick={() => setOpen(i)}
               >
-                <span className={`font-bold text-base sm:text-lg ${open === i ? 'text-gray-950' : 'text-gray-950'}`}>
+                <span className={`font-bold text-base sm:text-lg ${open === i ? 'text-white' : 'text-gray-950'}`}>
                   {faq.q}
                 </span>
-                <span className={`text-2xl font-light flex-shrink-0 ${open === i ? 'text-gray-600' : 'text-gray-600'}`}>
+                <span className={`text-2xl font-light flex-shrink-0 ${open === i ? 'text-white' : 'text-gray-600'}`}>
                   {open === i ? '−' : '+'}
                 </span>
               </button>
               {open === i && (
                 <div className="px-6 pb-6">
-                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{faq.a}</p>
+                  <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{faq.a}</p>
                 </div>
               )}
             </div>
