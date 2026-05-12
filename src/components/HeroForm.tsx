@@ -69,7 +69,7 @@ export default function HeroForm() {
     <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
       {/* Header bar */}
       <div className="bg-orange-500 px-6 py-3 text-center">
-        <h2 className="text-lg font-bold text-white">Get a Free Estimate Today!</h2>
+        <h2 className="text-2xl font-bold text-white">Get a Free Estimate Today!</h2>
       </div>
 
       {/* Review badges */}
