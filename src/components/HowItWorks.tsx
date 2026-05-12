@@ -38,7 +38,7 @@ const steps = [
 export default function HowItWorks() {
   const ref = useReveal()
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} className="py-20 btn-dark" style={{ background: "#111" }}>
+    <section ref={ref as React.RefObject<HTMLElement>} className="py-20" style={{ background: "#111" }}>
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-display reveal text-white text-xs font-bold uppercase tracking-[4px] mb-3">Simple Process</p>
@@ -49,7 +49,7 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="reveal px-8 py-8 text-center flex flex-col items-center gap-3 flex-1"
+              className="reveal btn-dark px-8 py-8 text-center flex flex-col items-center gap-3 flex-1" style={{ background: "#1a1a1a", cursor: "default" }}
               style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)' }}
             >
               <div className="text-white">{step.icon}</div>
