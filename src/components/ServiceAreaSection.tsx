@@ -136,7 +136,7 @@ export default function ServiceAreaSection() {
         <div className="flex flex-wrap gap-3 mt-8 justify-center">
           {['Fort Worth', 'Keller', 'Saginaw', 'Haslet', 'Azle', 'North Richland Hills', 'Watauga', 'Haltom City'].map((city) => (
             <span key={city} className="flex items-center gap-2 text-gray-300 text-sm bg-black px-4 py-2 rounded-none border border-gray-700">
-              <span className="w-2 h-2 rounded-none bg-black inline-block" />
+              <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
               {city}
             </span>
           ))}
