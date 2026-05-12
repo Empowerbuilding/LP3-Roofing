@@ -59,10 +59,10 @@ export default function WarrantySection() {
 function WarrantyContent() {
   return (
     <div className="max-w-lg">
-      <p className="reveal from-left text-white text-xs font-bold uppercase tracking-[4px] mb-4">
+      <p className="font-display reveal from-left text-white text-xs font-bold uppercase tracking-[4px] mb-4">
         Fort Worth&apos;s Trusted Roofing Experts
       </p>
-      <h2 className="reveal from-left delay-100 text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
+      <h2 className="font-display reveal from-left delay-100 text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
         Industry-Leading Warranties On Every Roof We Install
       </h2>
       <p className="reveal from-left delay-200 text-gray-400 text-base leading-relaxed mb-8">

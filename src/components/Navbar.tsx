@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const navLinkClass = "text-base font-semibold text-gray-300 hover:text-white transition-colors duration-200 tracking-wide uppercase"
+const navLinkClass = "font-display text-sm font-semibold text-gray-300 hover:text-white transition-colors duration-200 tracking-[3px] uppercase"
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -47,7 +47,7 @@ export default function Navbar() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-gray-200 text-gray-900 text-base font-bold rounded-lg tracking-wide uppercase transition-all duration-200"
+              className="font-display inline-flex items-center gap-2 px-6 py-2.5 bg-white hover:bg-gray-100 text-black text-sm font-bold rounded-none tracking-[2px] uppercase transition-all duration-200"
             >
               Free Inspection
             </Link>

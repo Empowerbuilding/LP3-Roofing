@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import { Oswald } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FloatingCTA from "@/components/FloatingCTA";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const oswald = Oswald({
@@ -28,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${oswald.variable}`}>
-      <body className="min-h-screen flex flex-col bg-white text-gray-950 font-sans antialiased">
+    <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
+      <body className="min-h-screen flex flex-col bg-white text-gray-950 antialiased" style={{ fontFamily: 'Inter, sans-serif' }}>
         <Navbar />
         <div className="flex flex-col flex-1">{children}</div>
         <FloatingCTA />
