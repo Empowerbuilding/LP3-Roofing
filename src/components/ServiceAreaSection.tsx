@@ -58,7 +58,7 @@ export default function ServiceAreaSection() {
         disableDefaultUI: true,
         zoomControl: true,
         styles: [
-          { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#a8d4e6' }] },
+          { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#cbd5e1' }] },
           { featureType: 'landscape', elementType: 'geometry', stylers: [{ color: '#f5f3ef' }] },
           { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#ffffff' }] },
           { featureType: 'poi', elementType: 'geometry', stylers: [{ color: '#e8e4dc' }] },
