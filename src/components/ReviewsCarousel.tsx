@@ -73,7 +73,7 @@ export default function ReviewsCarousel() {
         {/* Card */}
         <div className="reveal delay-200 mt-10 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden transition-all duration-500">
           {/* Header bar */}
-          <div className="bg-gray-950 px-6 py-4 flex items-center justify-between">
+          <div className="bg-black px-6 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               {/* Google G */}
               <svg className="w-6 h-6" viewBox="0 0 24 24">

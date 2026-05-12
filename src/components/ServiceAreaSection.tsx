@@ -79,7 +79,7 @@ export default function ServiceAreaSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-gray-950 py-20" style={{ overflowX: 'clip' }}>
+    <section ref={sectionRef} className="bg-black py-20" style={{ overflowX: 'clip' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-12">

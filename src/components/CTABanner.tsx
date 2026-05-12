@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function CTABanner() {
   return (
-    <section className="bg-gray-950 py-16">
+    <section className="bg-black py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">
           Ready to Protect Your Home?

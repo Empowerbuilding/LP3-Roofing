@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function WarrantySection() {
   const ref = useReveal()
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} className="bg-gray-950">
+    <section ref={ref as React.RefObject<HTMLElement>} className="bg-black">
       <div className="max-w-7xl mx-auto">
 
         {/* Mobile: photo on top, text below — stacked in dark card */}
@@ -27,7 +27,7 @@ export default function WarrantySection() {
         <div className="hidden lg:grid lg:grid-cols-2 min-h-[560px]">
           {/* Left — dark bg with diagonal clip */}
           <div
-            className="relative flex items-center bg-gray-950 px-10 py-20 lg:pr-24"
+            className="relative flex items-center bg-black px-10 py-20 lg:pr-24"
             style={{ clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)' }}
           >
             <WarrantyContent />
