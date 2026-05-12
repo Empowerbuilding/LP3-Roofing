@@ -1,51 +1,55 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Oswald', sans-serif;
 }
 
 body {
   background: #ffffff;
   color: #0a0a0a;
+  font-family: 'Inter', sans-serif;
 }
 
+/* Kill default blue on all links and focus states */
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+input:focus, select:focus, textarea:focus { outline: none; }
+* { -webkit-tap-highlight-color: transparent; }
+
+/* Display font utility */
+.font-display { font-family: 'Oswald', sans-serif; }
+
 /* Truck slide-in animation */
-.truck-hidden {
-  transform: translateX(100vw);
-  opacity: 0;
-}
+.truck-hidden { transform: translateX(100vw); opacity: 0; }
 .truck-visible {
-  transform: translateX(0);
-  opacity: 1;
+  transform: translateX(0); opacity: 1;
   transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.8s ease;
 }
 
-/* ── Scroll reveal animations ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.from-left {
-  transform: translateX(-48px);
-}
-.reveal.from-right {
-  transform: translateX(48px);
-}
-.reveal.scale-in {
-  transform: scale(0.92);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translate(0) scale(1);
-}
-/* Stagger delays */
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.from-left { transform: translateX(-48px); }
+.reveal.from-right { transform: translateX(48px); }
+.reveal.scale-in { transform: scale(0.92); }
+.reveal.visible { opacity: 1; transform: translate(0) scale(1); }
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }
 .delay-400 { transition-delay: 0.4s; }
 .delay-500 { transition-delay: 0.5s; }
 
-/* Hide scrollbar for carousel */
+/* Carousel */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Diagonal section divider */
+.clip-diagonal-down {
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  padding-bottom: 6rem;
+}
+.clip-diagonal-up {
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+  padding-top: 6rem;
+}

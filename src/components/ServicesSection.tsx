@@ -41,8 +41,8 @@ export default function ServicesSection() {
 
           {/* Right — content */}
           <div>
-            <p className="reveal from-left text-gray-500 text-sm font-bold uppercase tracking-[4px] mb-3">Fort Worth, TX · DFW Metro</p>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-950 leading-tight mb-6">
+            <p className="font-display reveal from-left text-gray-500 text-sm font-bold uppercase tracking-[4px] mb-3">Fort Worth, TX · DFW Metro</p>
+            className="font-display text-4xl sm:text-5xl font-extrabold text-gray-950 leading-tight mb-6">
               Roofing With<br />
               <span className="text-gray-950">Confidence</span>
             </h2>
