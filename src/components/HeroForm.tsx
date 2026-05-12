@@ -68,7 +68,7 @@ export default function HeroForm() {
   return (
     <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
       {/* Header bar */}
-      <div className="px-6 py-3 text-center" style={{ background: "#111" }}>
+      <div className="px-6 py-3 text-center btn-dark" style={{ background: "#111" }}>
         <h2 className="font-display text-4xl font-bold text-white">Get a Free Estimate Today!</h2>
       </div>
 
@@ -131,7 +131,7 @@ export default function HeroForm() {
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="w-full font-bold py-3 transition-colors duration-200" style={{ background: "#111", color: "#fff" }}
+          className="w-full font-bold py-3 transition-colors duration-200 btn-dark" style={{ background: "#111", color: "#fff" }}
         >
           {status === 'submitting' ? 'Sending…' : 'Get My Free Estimate →'}
         </button>

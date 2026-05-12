@@ -59,3 +59,30 @@ button[class*="bg-black"] {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+/* Universal button hover — all dark buttons visibly respond */
+a[style*="background: \"#111\""],
+a[style*='background: "#111"'],
+button[style*='background: "#111"'] {
+  transition: all 0.2s ease !important;
+}
+
+/* Catch-all: any a or button with dark inline bg */
+a:hover, button:hover {
+  opacity: 0.85;
+}
+
+/* Dark button hover effects */
+.btn-dark {
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease !important;
+}
+.btn-dark:hover {
+  background: #333 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4) !important;
+}
+.btn-dark:active {
+  transform: translateY(0px) !important;
+  box-shadow: none !important;
+  background: #000 !important;
+}

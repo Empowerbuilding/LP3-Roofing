@@ -72,10 +72,10 @@ function WarrantyContent() {
         warranties on the roof system itself. Licensed, insured, and built to last.
       </p>
       <div className="flex flex-wrap gap-4">
-        <Link href="/about" className="px-7 py-3 font-bold text-sm uppercase tracking-wide transition-all duration-200" style={{ background: "#111", color: "#fff", border: "2px solid #111" }}>
+        <Link href="/about" className="px-7 py-3 font-bold text-sm uppercase tracking-wide transition-all duration-200 btn-dark" style={{ background: "#111", color: "#fff", border: "2px solid #111" }}>
           About LP3 Roofing
         </Link>
-        <Link href="/contact" className="px-7 py-3 font-bold text-sm uppercase tracking-wide transition-all duration-200" style={{ background: "#111", color: "#fff" }}>
+        <Link href="/contact" className="px-7 py-3 font-bold text-sm uppercase tracking-wide transition-all duration-200 btn-dark" style={{ background: "#111", color: "#fff" }}>
           Get a Free Quote
         </Link>
       </div>
