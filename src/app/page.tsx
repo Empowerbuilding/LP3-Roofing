@@ -34,9 +34,9 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Headline + subtext + phone */}
             <div className="text-center lg:text-left">
-              <h1 className="font-display text-4xl sm:text-4xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+              <h1 className="font-display text-4xl sm:text-4xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight" style={{ animation: "fadeSlideUp 0.8s ease both" }}>
                 Fort Worth&apos;s{" "}
-                <span className="text-white">#1 Rated</span>
+                <span style={{ background: "linear-gradient(90deg, #fff 0%, #aaa 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>#1 Rated</span>
                 <br />
                 Roofing Contractor
               </h1>
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
 
             {/* Right: Estimate form card */}
-            <div>
+            <div style={{ filter: "drop-shadow(0 0 32px rgba(255,255,255,0.15))" }}>
               <HeroForm />
             </div>
           </div>
