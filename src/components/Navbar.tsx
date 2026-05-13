@@ -8,7 +8,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 overflow-hidden shadow-xl h-24 md:h-36" style={{ background: 'linear-gradient(105deg, #000 0%, #000 42%, #fff 42%, #fff 100%)' }}>
+    <nav className="sticky top-0 z-50 overflow-hidden shadow-xl h-24 md:h-36" style={{ background: 'linear-gradient(105deg, #000 0%, #000 42%, #f0f0f0 42%, #f0f0f0 100%)' }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
 
         {/* Logo — black side */}
