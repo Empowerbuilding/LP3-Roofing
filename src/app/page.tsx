@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex items-center min-h-[auto] lg:min-h-screen overflow-hidden">
+      <section className="relative flex items-center min-h-[auto] lg:min-h-screen overflow-hidden" style={{ background: '#111 url("https://ejsnbluvkqocuchifdvp.supabase.co/storage/v1/object/public/lp3-assets/hero-poster.jpg") center/cover no-repeat' }}>
         {/* Video background */}
         <video
           autoPlay
