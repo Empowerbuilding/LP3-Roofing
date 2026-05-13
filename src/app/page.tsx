@@ -25,9 +25,10 @@ export default function Home() {
           loop
           muted
           playsInline
+          poster="https://ejsnbluvkqocuchifdvp.supabase.co/storage/v1/object/public/lp3-assets/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/hero-video.mp4" type="video/mp4" />
+          <source src="https://ejsnbluvkqocuchifdvp.supabase.co/storage/v1/object/public/lp3-assets/hero-video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-24">
