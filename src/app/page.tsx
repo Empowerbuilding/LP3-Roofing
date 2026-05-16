@@ -36,14 +36,14 @@ export default function Home() {
             {/* Left: Headline + subtext + phone */}
             <div className="text-center lg:text-left">
               <h1 className="font-display text-4xl sm:text-4xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight" style={{ animation: "fadeSlideUp 0.8s ease both" }}>
-                Fort Worth&apos;s{" "}
+                North Fort Worth&apos;s{" "}
                 <span style={{ background: "linear-gradient(90deg, #fff 0%, #aaa 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>#1 Rated</span>
                 <br />
                 Roofing Contractor
               </h1>
               <p className="mt-2 lg:mt-6 text-sm sm:text-xl text-gray-200 leading-snug max-w-lg">
                 Licensed &amp; insured. Storm damage specialists. 20+ years serving the DFW area.
-                We handle your insurance claim from start to finish — at no extra cost to you.
+                We handle your roofing needs from start to finish — at no extra cost to you.
               </p>
               <a
                 href="tel:8175550100"

@@ -53,8 +53,8 @@ export default function ServiceAreaSection() {
       if (!mounted || !mapContainerRef.current || mapInitRef.current) return
       mapInitRef.current = true
       const map = new window.google.maps.Map(mapContainerRef.current, {
-        center: { lat: 32.8, lng: -97.35 },
-        zoom: 9,
+        center: { lat: 32.92, lng: -97.18 },
+        zoom: 10,
         disableDefaultUI: true,
         zoomControl: true,
         styles: [
@@ -62,12 +62,12 @@ export default function ServiceAreaSection() {
         ],
       })
       new window.google.maps.Circle({
-        map, center: { lat: 32.8, lng: -97.35 }, radius: 40000,
+        map, center: { lat: 32.92, lng: -97.18 }, radius: 30000,
         strokeColor: '#f97316', strokeOpacity: 0.9, strokeWeight: 3,
         fillColor: '#f97316', fillOpacity: 0.12,
       })
       new window.google.maps.Marker({
-        position: { lat: 32.8, lng: -97.35 }, map,
+        position: { lat: 32.92, lng: -97.18 }, map,
         icon: { path: window.google.maps.SymbolPath.CIRCLE, scale: 12, fillColor: '#f97316', fillOpacity: 1, strokeColor: '#ffffff', strokeWeight: 3 },
       })
       setMapLoaded(true)
@@ -83,7 +83,7 @@ export default function ServiceAreaSection() {
           <p className="font-display text-white text-xs font-bold uppercase tracking-[4px] mb-3">Service Area</p>
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white">Proudly Serving North Fort Worth & DFW</h2>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto text-sm">
-            From Keller to Saginaw, Haslet to Azle — if you&apos;re in the DFW area, LP3 is your local roofer.
+            Serving the entire northside DFW — from Keller to Grapevine, Southlake to Azle. If you&apos;re in the DFW area, LP3 is your local roofer.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export default function ServiceAreaSection() {
 
         {/* City pills */}
         <div className="flex flex-wrap gap-3 mt-8 justify-center">
-          {['Fort Worth', 'Keller', 'Saginaw', 'Haslet', 'Azle', 'North Richland Hills', 'Watauga', 'Haltom City'].map((city) => (
+          {['Colleyville', 'Southlake', 'Grapevine', 'Keller', 'Westlake', 'North Richland Hills', 'Watauga', 'Fort Worth', 'Hurst', 'Haltom City', 'Haslet', 'Saginaw', 'Azle'].map((city) => (
             <span key={city} className="flex items-center gap-2 text-gray-300 text-sm bg-black px-4 py-2 rounded-none border border-gray-700">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
               {city}
