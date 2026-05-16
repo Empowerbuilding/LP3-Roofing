@@ -1,7 +1,7 @@
 export default function FloatingCTA() {
   return (
     <a
-      href="tel:8175550100"
+      href="tel:8167727001"
       className="fixed bottom-6 right-0 z-50 flex items-center gap-2 font-bold px-5 py-3 shadow-lg transition-colors duration-200 md:hidden btn-dark" style={{ background: "#111", color: "#fff" }}
     >
       <svg className="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -9,7 +9,7 @@ export default function FloatingCTA() {
       </svg>
       <div className="flex flex-col leading-tight">
         <span className="text-xs font-semibold uppercase tracking-wide">Call Us Now</span>
-        <span className="text-sm font-bold">817-555-0100</span>
+        <span className="text-sm font-bold">(816) 772-7001</span>
       </div>
     </a>
   )

@@ -46,7 +46,7 @@ export default function Home() {
                 We handle your roofing needs from start to finish — at no extra cost to you.
               </p>
               <a
-                href="tel:8175550100"
+                href="tel:8167727001"
                 className="mt-4 lg:mt-8 inline-flex items-center gap-2 bg-black hover:bg-gray-900 lg:bg-transparent lg:hover:bg-transparent text-white lg:hover:text-gray-300 font-bold rounded-none px-4 py-1.5 lg:px-0 lg:py-0 lg:rounded-none transition-colors duration-200 mx-auto lg:mx-0 text-sm lg:text-base"
               >
                 <div className="flex items-center justify-center w-8 h-8 lg:w-12 lg:h-12 rounded-none lg:bg-black flex-shrink-0">
@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="hidden lg:block text-sm text-gray-300">Call us anytime</div>
-                  <div className="text-base lg:text-2xl font-bold tracking-wide">817-555-0100</div>
+                  <div className="text-base lg:text-2xl font-bold tracking-wide">(816) 772-7001</div>
                 </div>
               </a>
             </div>

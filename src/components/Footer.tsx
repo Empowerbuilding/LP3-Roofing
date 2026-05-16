@@ -19,7 +19,7 @@ export default function Footer() {
               Fort Worth&apos;s most trusted roofing contractor. Licensed, insured, and committed to quality craftsmanship on every job.
             </p>
             <p className="mt-4 font-display text-white font-semibold text-lg tracking-widest">
-              817-555-0100
+              (816) 772-7001
             </p>
             <p className="text-sm text-gray-400 mt-1">Fort Worth, TX</p>
           </div>
