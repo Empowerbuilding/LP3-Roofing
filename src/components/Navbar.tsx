@@ -35,10 +35,10 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="tel:8167727001"
+            href="tel:6823820135"
             className="font-display text-sm font-semibold text-gray-600 hover:text-black tracking-widest uppercase transition-colors duration-200 ml-2"
           >
-            (816) 772-7001
+            (682) 382-0135
           </a>
           <Link
             href="/contact"
@@ -66,8 +66,8 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-4 border-t border-gray-200 space-y-3">
-            <a href="tel:8167727001" className="block font-display text-center py-3 border border-gray-900 text-gray-900 text-sm tracking-widest uppercase font-semibold">
-              (816) 772-7001
+            <a href="tel:6823820135" className="block font-display text-center py-3 border border-gray-900 text-gray-900 text-sm tracking-widest uppercase font-semibold">
+              (682) 382-0135
             </a>
             <Link href="/contact" className="block font-display text-center py-3 bg-black text-white text-sm font-bold tracking-[2px] uppercase" onClick={() => setMobileOpen(false)}>
               Free Inspection
