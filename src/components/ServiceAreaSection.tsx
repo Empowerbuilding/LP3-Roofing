@@ -54,7 +54,7 @@ export default function ServiceAreaSection() {
       mapInitRef.current = true
       const map = new window.google.maps.Map(mapContainerRef.current, {
         center: { lat: 32.92, lng: -97.18 },
-        zoom: 10,
+        zoom: 9,
         disableDefaultUI: true,
         zoomControl: true,
         styles: [
@@ -62,7 +62,7 @@ export default function ServiceAreaSection() {
         ],
       })
       new window.google.maps.Circle({
-        map, center: { lat: 32.92, lng: -97.18 }, radius: 30000,
+        map, center: { lat: 32.92, lng: -97.18 }, radius: 40000,
         strokeColor: '#f97316', strokeOpacity: 0.9, strokeWeight: 3,
         fillColor: '#f97316', fillOpacity: 0.12,
       })
