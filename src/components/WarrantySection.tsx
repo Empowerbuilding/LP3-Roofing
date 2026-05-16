@@ -15,7 +15,7 @@ export default function WarrantySection() {
         {/* Photo — full width on mobile, hidden on desktop (shown via grid below) */}
         <div className="relative h-64 w-full lg:hidden">
           <Image
-            src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/inspection-photo.png"
+            src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/roofing%20hj.webp"
             alt="LP3 Roofing inspector on a roof"
             fill
             className="object-cover object-top"
@@ -36,7 +36,7 @@ export default function WarrantySection() {
           <div className="relative flex items-center justify-center bg-gray-100">
             <div className="absolute inset-0">
               <Image
-                src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/inspection-photo.png"
+                src="https://dwwfegzxjccqfrtgspzx.supabase.co/storage/v1/object/public/assets/roofing%20hj.webp"
                 alt="LP3 Roofing inspector on a roof"
                 fill
                 className="object-cover object-top"
